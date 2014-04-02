@@ -27,3 +27,13 @@ C:\Users\Steven\Documents\Visual Studio 2012\Projects\BlackjackSim - V3\Blackjac
 C:\Users\Steven\Documents\Visual Studio 2012\Projects\BlackjackSim - V3\Blackjack.Library.Test\obj\Debug\Blackjack.Library.Test.csprojResolveAssemblyReference.cache
 C:\Users\Steven\Documents\Visual Studio 2012\Projects\BlackjackSim - V3\Blackjack.Library.Test\obj\Debug\Cornfield.Blackjack.Library.Test.dll
 C:\Users\Steven\Documents\Visual Studio 2012\Projects\BlackjackSim - V3\Blackjack.Library.Test\obj\Debug\Cornfield.Blackjack.Library.Test.pdb
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\Blackjack.Library.Test\bin\Debug\Cornfield.Blackjack.Library.Test.dll
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\Blackjack.Library.Test\bin\Debug\Cornfield.Blackjack.Library.Test.pdb
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\Blackjack.Library.Test\bin\Debug\Cornfield.Blackjack.Library.dll
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\Blackjack.Library.Test\bin\Debug\Cornfield.CardGame.Library.dll
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\Blackjack.Library.Test\bin\Debug\Moq.dll
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\Blackjack.Library.Test\bin\Debug\Cornfield.Blackjack.Library.pdb
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\Blackjack.Library.Test\bin\Debug\Cornfield.CardGame.Library.pdb
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\Blackjack.Library.Test\obj\Debug\Blackjack.Library.Test.csprojResolveAssemblyReference.cache
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\Blackjack.Library.Test\obj\Debug\Cornfield.Blackjack.Library.Test.dll
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\Blackjack.Library.Test\obj\Debug\Cornfield.Blackjack.Library.Test.pdb

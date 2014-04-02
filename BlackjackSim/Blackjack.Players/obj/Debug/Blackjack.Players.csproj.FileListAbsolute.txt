@@ -25,3 +25,12 @@ C:\Users\Steven\Documents\Visual Studio 2012\Projects\BlackjackSim - V3\Blackjac
 C:\Users\Steven\Documents\Visual Studio 2012\Projects\BlackjackSim - V3\Blackjack.Players\obj\Debug\Blackjack.Players.csprojResolveAssemblyReference.cache
 C:\Users\Steven\Documents\Visual Studio 2012\Projects\BlackjackSim - V3\Blackjack.Players\obj\Debug\Cornfield.Blackjack.Players.dll
 C:\Users\Steven\Documents\Visual Studio 2012\Projects\BlackjackSim - V3\Blackjack.Players\obj\Debug\Cornfield.Blackjack.Players.pdb
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\Blackjack.Players\bin\Debug\Cornfield.Blackjack.Players.dll
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\Blackjack.Players\bin\Debug\Cornfield.Blackjack.Players.pdb
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\Blackjack.Players\bin\Debug\Cornfield.Blackjack.Library.dll
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\Blackjack.Players\bin\Debug\Cornfield.CardGame.Library.dll
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\Blackjack.Players\bin\Debug\Cornfield.Blackjack.Library.pdb
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\Blackjack.Players\bin\Debug\Cornfield.CardGame.Library.pdb
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\Blackjack.Players\obj\Debug\Blackjack.Players.csprojResolveAssemblyReference.cache
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\Blackjack.Players\obj\Debug\Cornfield.Blackjack.Players.dll
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\Blackjack.Players\obj\Debug\Cornfield.Blackjack.Players.pdb

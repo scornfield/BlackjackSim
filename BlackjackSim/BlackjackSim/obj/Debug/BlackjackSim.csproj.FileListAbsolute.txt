@@ -44,3 +44,19 @@ C:\Users\Steven\Documents\Visual Studio 2012\Projects\BlackjackSim - V3\Blackjac
 C:\Users\Steven\Documents\Visual Studio 2012\Projects\BlackjackSim - V3\BlackjackSim\obj\Debug\BlackjackSim.BlackjackSimMain.resources
 C:\Users\Steven\Documents\Visual Studio 2012\Projects\BlackjackSim - V3\BlackjackSim\obj\Debug\BlackjackSim.Properties.Resources.resources
 C:\Users\Steven\Documents\Visual Studio 2012\Projects\BlackjackSim - V3\BlackjackSim\obj\Debug\BlackjackSim.csproj.GenerateResource.Cache
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\BlackjackSim\bin\Debug\BlackjackSim.exe.config
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\BlackjackSim\bin\Debug\BlackjackSim.exe
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\BlackjackSim\bin\Debug\BlackjackSim.pdb
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\BlackjackSim\bin\Debug\Cornfield.Blackjack.Library.dll
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\BlackjackSim\bin\Debug\Cornfield.Blackjack.Players.dll
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\BlackjackSim\bin\Debug\Cornfield.CardGame.Library.dll
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\BlackjackSim\bin\Debug\SourceGrid.dll
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\BlackjackSim\bin\Debug\Cornfield.Blackjack.Library.pdb
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\BlackjackSim\bin\Debug\Cornfield.Blackjack.Players.pdb
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\BlackjackSim\bin\Debug\Cornfield.CardGame.Library.pdb
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\BlackjackSim\obj\Debug\BlackjackSim.csprojResolveAssemblyReference.cache
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\BlackjackSim\obj\Debug\BlackjackSim.BlackjackSimMain.resources
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\BlackjackSim\obj\Debug\BlackjackSim.Properties.Resources.resources
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\BlackjackSim\obj\Debug\BlackjackSim.csproj.GenerateResource.Cache
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\BlackjackSim\obj\Debug\BlackjackSim.exe
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\BlackjackSim\obj\Debug\BlackjackSim.pdb

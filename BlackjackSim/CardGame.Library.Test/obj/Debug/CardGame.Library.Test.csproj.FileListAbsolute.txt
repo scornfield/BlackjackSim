@@ -12,3 +12,10 @@ C:\Users\Steven\Documents\Visual Studio 2012\Projects\BlackjackSim - V2\CardGame
 C:\Users\Steven\Documents\Visual Studio 2012\Projects\BlackjackSim - V2\CardGame.Library.Test\obj\Debug\CardGame.Library.Test.csprojResolveAssemblyReference.cache
 C:\Users\Steven\Documents\Visual Studio 2012\Projects\BlackjackSim - V2\CardGame.Library.Test\obj\Debug\Cornfield.CardGame.Library.Test.dll
 C:\Users\Steven\Documents\Visual Studio 2012\Projects\BlackjackSim - V2\CardGame.Library.Test\obj\Debug\Cornfield.CardGame.Library.Test.pdb
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\CardGame.Library.Test\bin\Debug\Cornfield.CardGame.Library.Test.dll
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\CardGame.Library.Test\bin\Debug\Cornfield.CardGame.Library.Test.pdb
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\CardGame.Library.Test\bin\Debug\Cornfield.CardGame.Library.dll
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\CardGame.Library.Test\bin\Debug\Cornfield.CardGame.Library.pdb
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\CardGame.Library.Test\obj\Debug\CardGame.Library.Test.csprojResolveAssemblyReference.cache
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\CardGame.Library.Test\obj\Debug\Cornfield.CardGame.Library.Test.dll
+C:\Users\Steven\Documents\GitHub\BlackjackSim\BlackjackSim\CardGame.Library.Test\obj\Debug\Cornfield.CardGame.Library.Test.pdb
