@@ -94,33 +94,5 @@ namespace Cornfield.Blackjack.Library.Test
             dealer.Hand.AddCard(new CardBase(SuitlessCards.Six, Suits.Spades));
             Assert.AreEqual(new CardBase(SuitlessCards.Six, Suits.Spades), dealer.VisibleCard, "The dealer's second card should be visible to the player.");
         }
-
-        [TestMethod]
-        public void BlackjackDealer_CountOutcomesTest()
-        {
-            BlackjackDealer dealer = new BlackjackDealer();
-
-            BlackjackHandFlags outcome = BlackjackHandFlags.Win;
-
-            dealer.CountOutcomes(outcome);
-            outcome |= BlackjackHandFlags.Lose;
-            dealer.CountOutcomes(outcome);
-            outcome |= BlackjackHandFlags.Bust;
-            dealer.CountOutcomes(outcome);
-            outcome |= BlackjackHandFlags.Push;
-            dealer.CountOutcomes(outcome);
-            outcome |= BlackjackHandFlags.Blackjack;
-            dealer.CountOutcomes(outcome);
-
-            // Dealer only counts Busts and Blackjacks
-            Assert.AreEqual("Dealer", dealer.ObjectArray[0]); // Name
-            Assert.AreEqual(0, dealer.ObjectArray[1]); // Chips
-            Assert.AreEqual(0, dealer.ObjectArray[2]); // Wins
-            Assert.AreEqual(0, dealer.ObjectArray[3]); // Losses
-            Assert.AreEqual(3, dealer.ObjectArray[4]); // Busts
-            Assert.AreEqual(0, dealer.ObjectArray[5]); // Pushes
-            Assert.AreEqual(1, dealer.ObjectArray[6]); // Blackjacks
-
-        }
     }
 }

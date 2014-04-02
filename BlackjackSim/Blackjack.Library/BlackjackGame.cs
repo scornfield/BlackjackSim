@@ -7,8 +7,64 @@ using Cornfield.CardGame.Library;
 
 namespace Cornfield.Blackjack.Library
 {
+    #region Custom Event Args
+    public class BlackjackGamePlayIntervalReachedArgs : EventArgs
+    {
+        public BlackjackGamePlayIntervalReachedArgs(int handsPlayed, DateTime startTime)
+        {
+            _handsPlayed = handsPlayed;
+            _startTime = startTime;
+        }
+
+        private int _handsPlayed;
+        private DateTime _startTime;
+        
+        public int HandsPlayed
+        {
+            get { return _handsPlayed; }
+        }
+
+        public DateTime StartTime
+        {
+            get { return _startTime; }
+        }
+    }
+
+    public class BlackjackGameCompleteArgs : EventArgs
+    {
+        public BlackjackGameCompleteArgs(int handsPlayed, DateTime startTime, DateTime endTime)
+        {
+            _handsPlayed = handsPlayed;
+            _startTime = startTime;
+            _endTime = endTime;
+        }
+
+        private int _handsPlayed;
+        private DateTime _startTime;
+        private DateTime _endTime;
+
+        public int HandsPlayed
+        {
+            get { return _handsPlayed; }
+        }
+
+        public DateTime StartTime
+        {
+            get { return _startTime; }
+        }
+
+        public DateTime EndTime
+        {
+            get { return _endTime; }
+        }
+    }
+    #endregion
+
     public class BlackjackGame
     {
+        private DateTime _start;
+        private DateTime _end;
+
         public BlackjackTable Table { get; private set; }
         public BlackjackGame(int inNumDecks)
         {
@@ -20,7 +76,64 @@ namespace Cornfield.Blackjack.Library
             Table.AddPlayer(player, chips);
         }
 
-        public void StartHand()
+        #region Event Handlers
+        public event EventHandler<BlackjackGamePlayIntervalReachedArgs> PlayIntervalReached;
+        public event EventHandler<BlackjackGameCompleteArgs> BlackjackGameComplete;
+        protected virtual void OnRaisePlayIntervalReached(BlackjackGamePlayIntervalReachedArgs e)
+        {
+            // Make a temporary copy of the event to avoid possibility of 
+            // a race condition if the last subscriber unsubscribes 
+            // immediately after the null check and before the event is raised.
+            EventHandler<BlackjackGamePlayIntervalReachedArgs> handler = PlayIntervalReached;
+
+            // Event will be null if there are no subscribers 
+            if (handler != null)
+            {
+                // Use the () operator to raise the event.
+                handler(this, e);
+            }
+        }
+
+        protected virtual void OnRaiseBlackjackGameComplete(BlackjackGameCompleteArgs e)
+        {
+            // Make a temporary copy of the event to avoid possibility of 
+            // a race condition if the last subscriber unsubscribes 
+            // immediately after the null check and before the event is raised.
+            EventHandler<BlackjackGameCompleteArgs> handler = BlackjackGameComplete;
+
+            // Event will be null if there are no subscribers 
+            if (handler != null)
+            {
+                // Use the () operator to raise the event.
+                handler(this, e);
+            }
+        }
+        #endregion
+
+        #region Public Game Methods
+        // This method plays the game for a given number of hands, and raises an event at specified intervals
+        public void Play(int numHands, int interval)
+        {
+
+            _start = System.DateTime.Now;
+            for (int i = 1; i <= numHands; i++)
+            {
+                StartHand();
+                PlayHands();
+
+                if (i % interval == 0)
+                {
+                    OnRaisePlayIntervalReached(new BlackjackGamePlayIntervalReachedArgs(i, _start));
+                }
+            }
+            _end = System.DateTime.Now;
+            OnRaiseBlackjackGameComplete(new BlackjackGameCompleteArgs(numHands, _start, _end));
+        }
+        #endregion
+
+        #region Private Game Methods
+        // This method starts the hand for all of the players and the dealer
+        private void StartHand()
         {
             ICard card;
 
@@ -49,9 +162,10 @@ namespace Cornfield.Blackjack.Library
             Table.Info.DealerUpCard = Table.Dealer.VisibleCard;
         }
 
-        public void PlayHands()
+        // This method plays one round of hands for all players and the dealer
+        private void PlayHands()
         {
-            foreach(BlackjackSeat seat in Table.Seats)
+            foreach (BlackjackSeat seat in Table.Seats)
             {
                 PlaySeatHand(seat);
             }
@@ -69,6 +183,7 @@ namespace Cornfield.Blackjack.Library
             Table.Dealer.CountOutcomes(Table.Dealer.Hand.Flags);
         }
 
+        // This method plays one hand for one seat at the table
         private void PlaySeatHand(BlackjackSeat seat, int handIndex = 0)
         {
             BlackjackActions action = BlackjackActions.None;
@@ -94,6 +209,7 @@ namespace Cornfield.Blackjack.Library
             }
         }
 
+        // This method takes one action on one hand during a players turn
         private void PlayHandAction(BlackjackSeat seat, int handIndex, BlackjackActions action)
         {
             ICard card;
@@ -129,6 +245,7 @@ namespace Cornfield.Blackjack.Library
             }
         }
 
+        // This method plays the dealer's hand
         private void PlayDealerHand()
         {
             BlackjackActions action = BlackjackActions.None;
@@ -140,6 +257,7 @@ namespace Cornfield.Blackjack.Library
             }
         }
 
+        // This method takes an action on the dealer's hand
         private void PlayDealerAction(BlackjackActions action)
         {
             switch (action)
@@ -156,6 +274,7 @@ namespace Cornfield.Blackjack.Library
             }
         }
 
+        // This method finishes a hand for a seat at the table by distributing winnings and counting the outcomes
         private void FinishHand(BlackjackSeat seat, BlackjackHand hand)
         {
             BlackjackHandEvaluator.CompareHands(hand, Table.Dealer.Hand);
@@ -169,7 +288,9 @@ namespace Cornfield.Blackjack.Library
 
             seat.CountOutcomes(hand.Flags);
         }
+        #endregion
 
+        #region Debug Print Methods
         public void PrintStats()
         {
             Console.WriteLine("{0,-12}{1,8}{2,8}{3,8}{4,8}{5,8}{6,14}", "Name", "Wins", "Losses", "Pushes", "Busts", "BJacks", "Chips");
@@ -189,5 +310,6 @@ namespace Cornfield.Blackjack.Library
                 Console.WriteLine(string.Format("{0}\t{1}", seat.Player.Name, seat.Chips));
             }
         }
+        #endregion
     }
 }

@@ -21,7 +21,7 @@ namespace Cornfield.Blackjack.Library.Test
         {
             BlackjackHand hand = new BlackjackHand(10);
 
-            hand.DealCard(new CardBase(SuitlessCards.Five, Suits.Diamonds));
+            hand.DealCard(MockCards.Five);
 
             Assert.AreEqual(1, hand.Count, "The hand should have 1 card in it, but we found {0} card(s).", hand.Count);
             Assert.AreEqual(0, hand.Score, "The hand's score should be 0, because DealCard doesn't calculate the score, but it's {0}.", hand.Score);
@@ -32,7 +32,7 @@ namespace Cornfield.Blackjack.Library.Test
         {
             BlackjackHand hand = new BlackjackHand(10);
 
-            hand.AddCard(new CardBase(SuitlessCards.Five, Suits.Diamonds));
+            hand.AddCard(MockCards.Five);
 
             Assert.AreEqual(1, hand.Count, "The hand should have 1 card in it, but we found {0} card(s).", hand.Count);
             Assert.AreEqual(5, hand.Score, "The hand's score should be 5, but it's {0}.", hand.Score);
@@ -43,7 +43,7 @@ namespace Cornfield.Blackjack.Library.Test
         {
             BlackjackHand hand = new BlackjackHand(10);
 
-            hand.AddCard(new CardBase(SuitlessCards.Five, Suits.Diamonds));
+            hand.AddCard(MockCards.Five);
             Assert.AreEqual(1, hand.Count, "The hand should have 1 card in it, but we found {0} card(s).", hand.Count);
 
             hand.Clear();
@@ -55,7 +55,7 @@ namespace Cornfield.Blackjack.Library.Test
         {
             BlackjackHand hand = new BlackjackHand(10);
 
-            hand.Hit(new CardBase(SuitlessCards.Five, Suits.Diamonds));
+            hand.Hit(MockCards.Five);
 
             Assert.AreEqual(1, hand.Count, "The hand should have 1 card in it, but we found {0} card(s).", hand.Count);
             Assert.AreEqual(5, hand.Score, "The hand's score should be 5, but it's {0}.", hand.Score);
@@ -66,10 +66,10 @@ namespace Cornfield.Blackjack.Library.Test
         {
             BlackjackHand hand = new BlackjackHand(10);
 
-            hand.AddCard(new CardBase(SuitlessCards.Five, Suits.Diamonds));
-            hand.AddCard(new CardBase(SuitlessCards.Six, Suits.Clubs));
+            hand.AddCard(MockCards.Five);
+            hand.AddCard(MockCards.Six);
 
-            hand.DoubleDown(new CardBase(SuitlessCards.King, Suits.Hearts));
+            hand.DoubleDown(MockCards.King);
 
             Assert.AreEqual(20, hand.Bet, "The bet should be doubled now that the player has doubled down.");
             Assert.AreEqual(3, hand.Count, "The hand should now have 3 cards after the new card was added.");
@@ -81,15 +81,15 @@ namespace Cornfield.Blackjack.Library.Test
         {
             BlackjackHand hand = new BlackjackHand(10);
 
-            hand.AddCard(new CardBase(SuitlessCards.Eight, Suits.Diamonds));
-            hand.AddCard(new CardBase(SuitlessCards.Eight, Suits.Clubs));
+            hand.AddCard(MockCards.Eight);
+            hand.AddCard(MockCards.Eight);
 
             ICard splitCard = hand.Split();
 
             Assert.AreEqual(8, hand.Score, "The hand should now have a score of 8 after splitting.");
             Assert.AreEqual(1, hand.Count, "The hand should now have 1 card after splitting.");
 
-            hand.AddCard(new CardBase(SuitlessCards.King, Suits.Hearts));
+            hand.AddCard(MockCards.King);
             Assert.AreEqual(18, hand.Score, "The hand should now have a score of 18 after the new card was added.");
             Assert.AreEqual(2, hand.Count, "The hand should now have 2 cards after the new card was added.");
         }
@@ -98,26 +98,26 @@ namespace Cornfield.Blackjack.Library.Test
         public void BlackjackHand_SuitlessStringTest()
         {
             BlackjackHand hand = new BlackjackHand(10);
-            hand.AddCard(new CardBase(SuitlessCards.Eight, Suits.Diamonds));
-            hand.AddCard(new CardBase(SuitlessCards.Eight, Suits.Clubs));
+            hand.AddCard(MockCards.Eight);
+            hand.AddCard(MockCards.Eight);
 
             Assert.AreEqual("88", hand.SuitlessString, "The hand should have a SuitlessString of '88', but it is '{0}'", hand.SuitlessString);
 
             hand = new BlackjackHand(10);
-            hand.AddCard(new CardBase(SuitlessCards.Nine, Suits.Spades));
-            hand.AddCard(new CardBase(SuitlessCards.Seven, Suits.Hearts));
+            hand.AddCard(MockCards.Nine);
+            hand.AddCard(MockCards.Seven);
 
             Assert.AreEqual("97", hand.SuitlessString, "The hand should have a SuitlessString of '97', but it is '{0}'", hand.SuitlessString);
 
             hand = new BlackjackHand(10);
-            hand.AddCard(new CardBase(SuitlessCards.Ace, Suits.Diamonds));
-            hand.AddCard(new CardBase(SuitlessCards.Queen, Suits.Hearts));
+            hand.AddCard(MockCards.Ace);
+            hand.AddCard(MockCards.Queen);
 
             Assert.AreEqual("AQ", hand.SuitlessString, "The hand should have a SuitlessString of 'AQ', but it is '{0}'", hand.SuitlessString);
 
             hand = new BlackjackHand(10);
-            hand.AddCard(new CardBase(SuitlessCards.Six, Suits.Spades));
-            hand.AddCard(new CardBase(SuitlessCards.Ace, Suits.Clubs));
+            hand.AddCard(MockCards.Six);
+            hand.AddCard(MockCards.Ace);
 
             Assert.AreEqual("6A", hand.SuitlessString, "The hand should have a SuitlessString of '6A', but it is '{0}'", hand.SuitlessString);
         }

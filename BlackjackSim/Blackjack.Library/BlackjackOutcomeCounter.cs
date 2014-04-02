@@ -15,7 +15,7 @@ namespace Cornfield.Blackjack.Library
         int Blackjacks { get; set; }
         Dictionary<string, object> OtherInfo { get; set; }
 
-        object[] ObjectArray { get; }
+        void HandComplete(BlackjackHandFlags outcome);
     }
 
     public static class BlackjackOutcomeCounterExtentions
@@ -32,6 +32,8 @@ namespace Cornfield.Blackjack.Library
                 obj.Busts += 1;
             if (outcome.HasFlag(BlackjackHandFlags.Blackjack))
                 obj.Blackjacks += 1;
+
+            obj.HandComplete(outcome);
         }
 
         public static void ClearOutcomes(this IBlackjackOutcomeCounter obj)

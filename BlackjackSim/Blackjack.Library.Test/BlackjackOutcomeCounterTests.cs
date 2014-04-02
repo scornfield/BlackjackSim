@@ -18,22 +18,9 @@ namespace Cornfield.Blackjack.Library.Test
             OtherInfo = new Dictionary<string,object>();
         }
 
-        public object[] ObjectArray
+        public void HandComplete(BlackjackHandFlags outcome)
         {
-            get
-            {
-                object[] objs = new object[8];
-                objs[0] = "Name";
-                objs[1] = "Chips";
-                objs[2] = Wins;
-                objs[3] = Losses;
-                objs[4] = Busts;
-                objs[5] = Pushes;
-                objs[6] = Blackjacks;
-                objs[7] = OtherInfo;
 
-                return objs;
-            }
         }
     }
 
@@ -77,31 +64,6 @@ namespace Cornfield.Blackjack.Library.Test
             Assert.AreEqual(0, counter.Busts, "Counter has cleared its outcomes, should have 0 busts.");
             Assert.AreEqual(0, counter.Pushes, "Counter has cleared its outcomes, should have 0 pushes.");
             Assert.AreEqual(0, counter.Blackjacks, "Counter has cleared its outcomes, should have 0 blackjacks.");
-        }
-
-        [TestMethod]
-        public void BlackjackOutcomeCounter_ObjectArrayTest()
-        {
-            TestBlackjackOutcomeCounter counter = new TestBlackjackOutcomeCounter();
-
-            BlackjackHandFlags outcome = BlackjackHandFlags.Win;
-
-            counter.CountOutcomes(outcome);
-            outcome |= BlackjackHandFlags.Lose;
-            counter.CountOutcomes(outcome);
-            outcome |= BlackjackHandFlags.Bust;
-            counter.CountOutcomes(outcome);
-            outcome |= BlackjackHandFlags.Push;
-            counter.CountOutcomes(outcome);
-            outcome |= BlackjackHandFlags.Blackjack;
-            counter.CountOutcomes(outcome);
-
-            Assert.AreEqual(5, counter.ObjectArray[2]);
-            Assert.AreEqual(4, counter.ObjectArray[3]);
-            Assert.AreEqual(3, counter.ObjectArray[4]);
-            Assert.AreEqual(2, counter.ObjectArray[5]);
-            Assert.AreEqual(1, counter.ObjectArray[6]);
-
         }
     }
 }

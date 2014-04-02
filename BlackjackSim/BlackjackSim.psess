@@ -81,7 +81,19 @@
       <Path>100000 Hands - After Fix CalculateScore During Dealing.vsp</Path>
     </Report>
     <Report>
-      <Path>1000000 Hands</Path>
+      <Path>1000000 Hands.vsp</Path>
+    </Report>
+    <Report>
+      <Path>10000 Hands - After SourceGrid.vsp</Path>
+    </Report>
+    <Report>
+      <Path>100000 Hands - After SourceGrid.vsp</Path>
+    </Report>
+    <Report>
+      <Path>100000 Hands - After Multi-Threading.vsp</Path>
+    </Report>
+    <Report>
+      <Path>10000 Hands - After Multi-Threading.vsp</Path>
     </Report>
   </Reports>
   <Launches>

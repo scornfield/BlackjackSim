@@ -23,24 +23,6 @@ namespace Cornfield.Blackjack.Library
             Hand = new BlackjackHand(0);
         }
 
-        public object[] ObjectArray
-        {
-            get
-            {
-                object[] objs = new object[8];
-                objs[0] = Name;
-                objs[1] = 0;
-                objs[2] = 0;
-                objs[3] = 0;
-                objs[4] = Busts;
-                objs[5] = 0;
-                objs[6] = Blackjacks;
-                objs[7] = 0;
-
-                return objs;
-            }
-        }
-
         public sealed override double PlaceBet(double inChips)
         {
             throw new NotImplementedException("The dealer should never place a bet.");

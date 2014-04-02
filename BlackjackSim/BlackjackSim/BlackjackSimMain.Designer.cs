@@ -38,7 +38,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnRun = new System.Windows.Forms.Button();
             this.btnClearStats = new System.Windows.Forms.Button();
-            this.gridStats = new System.Windows.Forms.DataGridView();
             this.lblStatus = new System.Windows.Forms.ToolStripLabel();
             this.statusProgressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -55,15 +54,8 @@
             this.statusToolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.PlayerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Chips = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Wins = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Losses = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Busts = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pushes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Blackjacks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gridStats = new SourceGrid.DataGrid();
             this.gbSettings.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridStats)).BeginInit();
             this.statusToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -178,29 +170,6 @@
             this.btnClearStats.Text = "Clear Stats";
             this.btnClearStats.UseVisualStyleBackColor = true;
             this.btnClearStats.Click += new System.EventHandler(this.btnClearStats_Click);
-            // 
-            // gridStats
-            // 
-            this.gridStats.AllowUserToAddRows = false;
-            this.gridStats.AllowUserToDeleteRows = false;
-            this.gridStats.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridStats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridStats.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.PlayerName,
-            this.Chips,
-            this.Wins,
-            this.Losses,
-            this.Busts,
-            this.Pushes,
-            this.Blackjacks});
-            this.gridStats.Location = new System.Drawing.Point(10, 192);
-            this.gridStats.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gridStats.Name = "gridStats";
-            this.gridStats.ReadOnly = true;
-            this.gridStats.Size = new System.Drawing.Size(1114, 334);
-            this.gridStats.TabIndex = 7;
             // 
             // lblStatus
             // 
@@ -318,47 +287,22 @@
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 37);
             // 
-            // PlayerName
+            // gridStats
             // 
-            this.PlayerName.HeaderText = "Player Name";
-            this.PlayerName.Name = "PlayerName";
-            this.PlayerName.ReadOnly = true;
-            // 
-            // Chips
-            // 
-            this.Chips.HeaderText = "Chips";
-            this.Chips.Name = "Chips";
-            this.Chips.ReadOnly = true;
-            // 
-            // Wins
-            // 
-            this.Wins.HeaderText = "Wins";
-            this.Wins.Name = "Wins";
-            this.Wins.ReadOnly = true;
-            // 
-            // Losses
-            // 
-            this.Losses.HeaderText = "Losses";
-            this.Losses.Name = "Losses";
-            this.Losses.ReadOnly = true;
-            // 
-            // Busts
-            // 
-            this.Busts.HeaderText = "Busts";
-            this.Busts.Name = "Busts";
-            this.Busts.ReadOnly = true;
-            // 
-            // Pushes
-            // 
-            this.Pushes.HeaderText = "Pushes";
-            this.Pushes.Name = "Pushes";
-            this.Pushes.ReadOnly = true;
-            // 
-            // Blackjacks
-            // 
-            this.Blackjacks.HeaderText = "Blackjacks";
-            this.Blackjacks.Name = "Blackjacks";
-            this.Blackjacks.ReadOnly = true;
+            this.gridStats.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gridStats.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gridStats.DeleteQuestionMessage = "Are you sure to delete all the selected rows?";
+            this.gridStats.EnableSort = false;
+            this.gridStats.FixedRows = 1;
+            this.gridStats.Location = new System.Drawing.Point(13, 191);
+            this.gridStats.Name = "gridStats";
+            this.gridStats.SelectionMode = SourceGrid.GridSelectionMode.Row;
+            this.gridStats.Size = new System.Drawing.Size(1111, 336);
+            this.gridStats.TabIndex = 7;
+            this.gridStats.TabStop = true;
+            this.gridStats.ToolTipText = "";
             // 
             // BlackjackSimMain
             // 
@@ -374,10 +318,9 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "BlackjackSimMain";
             this.Text = "Cornfield\'s Blackjack Simulator";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.BlackjackSimMain_Load);
             this.gbSettings.ResumeLayout(false);
             this.gbSettings.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridStats)).EndInit();
             this.statusToolStrip.ResumeLayout(false);
             this.statusToolStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -394,7 +337,6 @@
         private System.Windows.Forms.Button btnRun;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnClearStats;
-        private System.Windows.Forms.DataGridView gridStats;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNumInterval;
         private System.Windows.Forms.TextBox txtNumHands;
@@ -414,13 +356,7 @@
         private System.Windows.Forms.ToolStrip statusToolStrip;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PlayerName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Chips;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Wins;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Losses;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Busts;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pushes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Blackjacks;
+        private SourceGrid.DataGrid gridStats;
     }
 }
 

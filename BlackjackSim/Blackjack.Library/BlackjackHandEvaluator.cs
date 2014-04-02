@@ -11,15 +11,14 @@ namespace Cornfield.Blackjack.Library
     public enum BlackjackHandFlags
     {
         None = 0,
-        Bust = 1,
-        Blackjack = 2,
-        Soft = 4,
-        Win = 8,
-        Lose = 16,
-        Push = 32,
-        Surrender = 64,
-        Split = 128,
-        DoubleDown = 256
+        Win = 1,
+        Lose = 2,
+        Push = 4,
+        Bust = 8,
+        Blackjack = 16,
+        Soft = 32,
+        Split = 64,
+        DoubleDown = 128,
     }
 
     public static class BlackjackHandEvaluator
@@ -93,16 +92,21 @@ namespace Cornfield.Blackjack.Library
                 // playerHand already has been evaluated for score and knows that it busted
                 playerHand.Flags = playerHand.Flags | BlackjackHandFlags.Lose;
             else if (dealerHand.Score > playerHand.Score && dealerHand.Score <= BUST_SCORE)
+                // If our score is less than the dealer and the dealer didn't bust, then we lost
                 playerHand.Flags = playerHand.Flags | BlackjackHandFlags.Lose;
             else if (playerHand.Score == dealerHand.Score)
             {
+                // If our score is equal to the dealer, we pushed
                 playerHand.Flags = playerHand.Flags | BlackjackHandFlags.Push;
-                if (playerHand.Score == 21 && playerHand.Count() == 2)
+                if (playerHand.Score == 21 && playerHand.Count() == 2 && dealerHand.Count() == 2)
+                    // If we both have Blackjack, set the Blackjack flag too
                     playerHand.Flags = playerHand.Flags | BlackjackHandFlags.Blackjack;
             }
             else if (playerHand.Score == 21 && playerHand.Count() == 2)
+                // If our score is 21 and we have two cards, then we got Blackjack!
                 playerHand.Flags = playerHand.Flags | BlackjackHandFlags.Blackjack | BlackjackHandFlags.Win;
             else if (dealerHand.Score >= BUST_SCORE || playerHand.Score > dealerHand.Score)
+                // If the dealer busted or our score is greater than the dealer, then we won!
                 playerHand.Flags = playerHand.Flags | BlackjackHandFlags.Win;
             else 
                 throw new BlackjackHandEvaluationException(playerHand, dealerHand);

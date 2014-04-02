@@ -16,6 +16,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencies", "Dependencies", "{24C79972-E8ED-408A-81A1-5EA868D7AFC2}"
 	ProjectSection(SolutionItems) = preProject
 		Dependencies\Moq.dll = Dependencies\Moq.dll
+		Dependencies\SourceGrid.dll = Dependencies\SourceGrid.dll
 	EndProjectSection
 EndProject
 Global

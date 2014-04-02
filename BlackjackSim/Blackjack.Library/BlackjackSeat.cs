@@ -34,21 +34,9 @@ namespace Cornfield.Blackjack.Library
             Chips = inChips;
         }
 
-        public object[] ObjectArray
+        public void HandComplete(BlackjackHandFlags outcome)
         {
-            get{
-                object[] objs = new object[8];
-                objs[0] = Player.Name;
-                objs[1] = Chips;
-                objs[2] = Wins;
-                objs[3] = Losses;
-                objs[4] = Busts;
-                objs[5] = Pushes;
-                objs[6] = Blackjacks;
-                objs[7] = OtherInfo;
 
-                return objs;
-            }
         }
 
         public override string ToString()

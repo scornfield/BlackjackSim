@@ -9,7 +9,6 @@ namespace Cornfield.Blackjack.Library
 {
     public class BlackjackTable
     {
-        
         public List<BlackjackSeat> Seats { get; private set; }
         public BlackjackDealer Dealer { get; private set; }
         public BlackjackDeck Deck { get; private set; }
@@ -70,6 +69,7 @@ namespace Cornfield.Blackjack.Library
         {
             foreach(BlackjackSeat seat in Seats)
             {
+                seat.Chips = 0;
                 seat.ClearOutcomes();
             }
         }
