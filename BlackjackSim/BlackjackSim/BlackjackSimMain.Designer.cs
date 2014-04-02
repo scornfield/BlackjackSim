@@ -414,13 +414,6 @@
         private System.Windows.Forms.ToolStrip statusToolStrip;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn winsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lossesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bustsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pushesDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn blackjacksDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn otherInfoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn PlayerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Chips;
         private System.Windows.Forms.DataGridViewTextBoxColumn Wins;

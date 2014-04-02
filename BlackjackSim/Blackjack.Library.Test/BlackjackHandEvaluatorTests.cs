@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Cornfield.CardGame.Library;
+using Moq;
+using System.Collections.Generic;
 
 namespace Cornfield.Blackjack.Library.Test
 {
@@ -10,28 +12,43 @@ namespace Cornfield.Blackjack.Library.Test
         [TestMethod]
         public void BlackjackHandEvaluator_CardValuesTest()
         {
-            Assert.AreEqual(11, BlackjackHandEvaluator.CardValue(new CardBase(SuitlessCards.Ace, Suits.Spades)),  "Aces should be worth 11 points.");
-            Assert.AreEqual(2, BlackjackHandEvaluator.CardValue(new CardBase(SuitlessCards.Two, Suits.Spades)), "Twos should be worth 2 points.");
-            Assert.AreEqual(3, BlackjackHandEvaluator.CardValue(new CardBase(SuitlessCards.Three, Suits.Spades)), "Threes should be worth 3 points.");
-            Assert.AreEqual(4, BlackjackHandEvaluator.CardValue(new CardBase(SuitlessCards.Four, Suits.Spades)), "Fours should be worth 4 points.");
-            Assert.AreEqual(5, BlackjackHandEvaluator.CardValue(new CardBase(SuitlessCards.Five, Suits.Spades)), "Fives should be worth 5 points.");
-            Assert.AreEqual(6, BlackjackHandEvaluator.CardValue(new CardBase(SuitlessCards.Six, Suits.Spades)), "Aces should be worth 6 points.");
-            Assert.AreEqual(7, BlackjackHandEvaluator.CardValue(new CardBase(SuitlessCards.Seven, Suits.Spades)), "Sevens should be worth 7 points.");
-            Assert.AreEqual(8, BlackjackHandEvaluator.CardValue(new CardBase(SuitlessCards.Eight, Suits.Spades)), "Eights should be worth 8 points.");
-            Assert.AreEqual(9, BlackjackHandEvaluator.CardValue(new CardBase(SuitlessCards.Nine, Suits.Spades)),"Nines should be worth 9 points.");
-            Assert.AreEqual(10, BlackjackHandEvaluator.CardValue(new CardBase(SuitlessCards.Ten, Suits.Spades)),  "Tens should be worth 10 points.");
-            Assert.AreEqual(10, BlackjackHandEvaluator.CardValue(new CardBase(SuitlessCards.Jack, Suits.Spades)), "Jacks should be worth 10 points.");
-            Assert.AreEqual(10, BlackjackHandEvaluator.CardValue(new CardBase(SuitlessCards.Queen, Suits.Spades)), "Queens should be worth 10 points.");
-            Assert.AreEqual(10, BlackjackHandEvaluator.CardValue(new CardBase(SuitlessCards.King, Suits.Spades)), "Kings should be worth 10 points.");
+            Mock<ICard> card = new Mock<ICard>();
+            
+            card.Setup(framework => framework.Card).Returns(SuitlessCards.Ace);
+            Assert.AreEqual(11, BlackjackHandEvaluator.CardValue(card.Object),  "Aces should be worth 11 points.");
+            card.Setup(framework => framework.Card).Returns(SuitlessCards.Two);
+            Assert.AreEqual(2, BlackjackHandEvaluator.CardValue(card.Object), "Twos should be worth 2 points.");
+            card.Setup(framework => framework.Card).Returns(SuitlessCards.Three);
+            Assert.AreEqual(3, BlackjackHandEvaluator.CardValue(card.Object), "Threes should be worth 3 points.");
+            card.Setup(framework => framework.Card).Returns(SuitlessCards.Four);
+            Assert.AreEqual(4, BlackjackHandEvaluator.CardValue(card.Object), "Fours should be worth 4 points.");
+            card.Setup(framework => framework.Card).Returns(SuitlessCards.Five);
+            Assert.AreEqual(5, BlackjackHandEvaluator.CardValue(card.Object), "Fives should be worth 5 points.");
+            card.Setup(framework => framework.Card).Returns(SuitlessCards.Six);
+            Assert.AreEqual(6, BlackjackHandEvaluator.CardValue(card.Object), "Aces should be worth 6 points.");
+            card.Setup(framework => framework.Card).Returns(SuitlessCards.Seven);
+            Assert.AreEqual(7, BlackjackHandEvaluator.CardValue(card.Object), "Sevens should be worth 7 points.");
+            card.Setup(framework => framework.Card).Returns(SuitlessCards.Eight);
+            Assert.AreEqual(8, BlackjackHandEvaluator.CardValue(card.Object), "Eights should be worth 8 points.");
+            card.Setup(framework => framework.Card).Returns(SuitlessCards.Nine);
+            Assert.AreEqual(9, BlackjackHandEvaluator.CardValue(card.Object), "Nines should be worth 9 points.");
+            card.Setup(framework => framework.Card).Returns(SuitlessCards.Ten);
+            Assert.AreEqual(10, BlackjackHandEvaluator.CardValue(card.Object), "Tens should be worth 10 points.");
+            card.Setup(framework => framework.Card).Returns(SuitlessCards.Jack);
+            Assert.AreEqual(10, BlackjackHandEvaluator.CardValue(card.Object), "Jacks should be worth 10 points.");
+            card.Setup(framework => framework.Card).Returns(SuitlessCards.Queen);
+            Assert.AreEqual(10, BlackjackHandEvaluator.CardValue(card.Object), "Queens should be worth 10 points.");
+            card.Setup(framework => framework.Card).Returns(SuitlessCards.King);
+            Assert.AreEqual(10, BlackjackHandEvaluator.CardValue(card.Object), "Kings should be worth 10 points.");
         }
 
         [TestMethod]
         public void BlackjackHandEvaluator_CalculateScore_BasicTest()
         {
             BlackjackHand hand = new BlackjackHand(0);
-            
-            hand.AddCard(new CardBase(SuitlessCards.Five, Suits.Diamonds));
-            hand.AddCard(new CardBase(SuitlessCards.Six, Suits.Spades));
+
+            hand.AddCard(MockCards.Five);
+            hand.AddCard(MockCards.Six);
             int score = BlackjackHandEvaluator.CalculateScore(hand);
 
             Assert.AreEqual(11, score, "Expected Score to be 11, got {0}.", score);
@@ -43,8 +60,8 @@ namespace Cornfield.Blackjack.Library.Test
         {
             BlackjackHand hand = new BlackjackHand(0);
 
-            hand.AddCard(new CardBase(SuitlessCards.Ace, Suits.Diamonds));
-            hand.AddCard(new CardBase(SuitlessCards.Jack, Suits.Clubs));
+            hand.AddCard(MockCards.Ace);
+            hand.AddCard(MockCards.Jack);
             int score = BlackjackHandEvaluator.CalculateScore(hand);
 
             Assert.AreEqual(hand.Score, score, "Hand's saved Score should equal Calculated Score.");
@@ -57,8 +74,8 @@ namespace Cornfield.Blackjack.Library.Test
         {
             BlackjackHand hand = new BlackjackHand(0);
 
-            hand.AddCard(new CardBase(SuitlessCards.Ace, Suits.Diamonds));
-            hand.AddCard(new CardBase(SuitlessCards.Six, Suits.Clubs));
+            hand.AddCard(MockCards.Ace);
+            hand.AddCard(MockCards.Six);
             int score = BlackjackHandEvaluator.CalculateScore(hand);
 
             Assert.AreEqual(hand.Score, score, "Hand's saved Score should equal Calculated Score.");
@@ -71,9 +88,9 @@ namespace Cornfield.Blackjack.Library.Test
         {
             BlackjackHand hand = new BlackjackHand(0);
 
-            hand.AddCard(new CardBase(SuitlessCards.Ace, Suits.Diamonds));
-            hand.AddCard(new CardBase(SuitlessCards.Six, Suits.Clubs));
-            hand.AddCard(new CardBase(SuitlessCards.Eight, Suits.Hearts));
+            hand.AddCard(MockCards.Ace);
+            hand.AddCard(MockCards.Six);
+            hand.AddCard(MockCards.Eight);
             int score = BlackjackHandEvaluator.CalculateScore(hand);
 
             Assert.AreEqual(hand.Score, score, "Hand's saved Score should equal Calculated Score.");
@@ -86,10 +103,10 @@ namespace Cornfield.Blackjack.Library.Test
         {
             BlackjackHand hand = new BlackjackHand(0);
 
-            hand.AddCard(new CardBase(SuitlessCards.Ace, Suits.Diamonds));
-            hand.AddCard(new CardBase(SuitlessCards.Six, Suits.Clubs));
-            hand.AddCard(new CardBase(SuitlessCards.Eight, Suits.Hearts));
-            hand.AddCard(new CardBase(SuitlessCards.King, Suits.Spades));
+            hand.AddCard(MockCards.Ace);
+            hand.AddCard(MockCards.Six);
+            hand.AddCard(MockCards.Eight);
+            hand.AddCard(MockCards.King);
             int score = BlackjackHandEvaluator.CalculateScore(hand);
 
             Assert.AreEqual(hand.Score, score, "Hand's saved Score should equal Calculated Score.");
@@ -103,10 +120,10 @@ namespace Cornfield.Blackjack.Library.Test
             BlackjackHand pHand = new BlackjackHand(0);
             BlackjackHand dHand = new BlackjackHand(0); // Dealer's cards don't matter for this test
 
-            pHand.AddCard(new CardBase(SuitlessCards.Ace, Suits.Diamonds));
-            pHand.AddCard(new CardBase(SuitlessCards.Six, Suits.Clubs));
-            pHand.AddCard(new CardBase(SuitlessCards.Eight, Suits.Hearts));
-            pHand.AddCard(new CardBase(SuitlessCards.King, Suits.Spades));
+            pHand.AddCard(MockCards.Ace);
+            pHand.AddCard(MockCards.Six);
+            pHand.AddCard(MockCards.Eight);
+            pHand.AddCard(MockCards.King);
 
             Assert.AreEqual(25, pHand.Score, "Expected player's Score to be 25, got {0}.", pHand.Score);
 
@@ -121,11 +138,11 @@ namespace Cornfield.Blackjack.Library.Test
             BlackjackHand pHand = new BlackjackHand(0);
             BlackjackHand dHand = new BlackjackHand(0);
 
-            pHand.AddCard(new CardBase(SuitlessCards.Ace, Suits.Diamonds));
-            pHand.AddCard(new CardBase(SuitlessCards.Seven, Suits.Clubs));
+            pHand.AddCard(MockCards.Ace);
+            pHand.AddCard(MockCards.Seven);
 
-            dHand.AddCard(new CardBase(SuitlessCards.Ten, Suits.Diamonds));
-            dHand.AddCard(new CardBase(SuitlessCards.Nine, Suits.Clubs));
+            dHand.AddCard(MockCards.Ten);
+            dHand.AddCard(MockCards.Nine);
 
             Assert.AreEqual(18, pHand.Score, "Expected player's Score to be 18, got {0}.", pHand.Score);
             Assert.AreEqual(19, dHand.Score, "Expected dealer's Score to be 19, got {0}.", dHand.Score);
@@ -141,11 +158,11 @@ namespace Cornfield.Blackjack.Library.Test
             BlackjackHand pHand = new BlackjackHand(0);
             BlackjackHand dHand = new BlackjackHand(0);
 
-            pHand.AddCard(new CardBase(SuitlessCards.Ten, Suits.Diamonds));
-            pHand.AddCard(new CardBase(SuitlessCards.Nine, Suits.Clubs));
+            pHand.AddCard(MockCards.Ten);
+            pHand.AddCard(MockCards.Nine);
 
-            dHand.AddCard(new CardBase(SuitlessCards.Queen, Suits.Hearts));
-            dHand.AddCard(new CardBase(SuitlessCards.Nine, Suits.Spades));
+            dHand.AddCard(MockCards.Queen);
+            dHand.AddCard(MockCards.Nine);
 
             Assert.AreEqual(19, pHand.Score, "Expected player's Score to be 19, got {0}.", pHand.Score);
             Assert.AreEqual(19, dHand.Score, "Expected dealer's Score to be 19, got {0}.", dHand.Score);
@@ -161,11 +178,11 @@ namespace Cornfield.Blackjack.Library.Test
             BlackjackHand pHand = new BlackjackHand(0);
             BlackjackHand dHand = new BlackjackHand(0);
 
-            pHand.AddCard(new CardBase(SuitlessCards.Ten, Suits.Diamonds));
-            pHand.AddCard(new CardBase(SuitlessCards.Ace, Suits.Clubs));
+            pHand.AddCard(MockCards.Ten);
+            pHand.AddCard(MockCards.Ace);
 
-            dHand.AddCard(new CardBase(SuitlessCards.Queen, Suits.Hearts));
-            dHand.AddCard(new CardBase(SuitlessCards.Ace, Suits.Spades));
+            dHand.AddCard(MockCards.Ace);
+            dHand.AddCard(MockCards.Queen);
 
             Assert.AreEqual(21, pHand.Score, "Expected player's Score to be 21, got {0}.", pHand.Score);
             Assert.AreEqual(21, dHand.Score, "Expected dealer's Score to be 21, got {0}.", dHand.Score);
@@ -181,11 +198,11 @@ namespace Cornfield.Blackjack.Library.Test
             BlackjackHand pHand = new BlackjackHand(0);
             BlackjackHand dHand = new BlackjackHand(0); // Dealer's cards don't matter for this test
 
-            pHand.AddCard(new CardBase(SuitlessCards.Ten, Suits.Diamonds));
-            pHand.AddCard(new CardBase(SuitlessCards.Ace, Suits.Clubs));
+            pHand.AddCard(MockCards.Ten);
+            pHand.AddCard(MockCards.Ace);
 
-            dHand.AddCard(new CardBase(SuitlessCards.Ten, Suits.Diamonds));
-            dHand.AddCard(new CardBase(SuitlessCards.Nine, Suits.Clubs));
+            dHand.AddCard(MockCards.Nine);
+            dHand.AddCard(MockCards.Queen);
 
             Assert.AreEqual(21, pHand.Score, "Expected player's Score to be 21, got {0}.", pHand.Score);
 
@@ -200,12 +217,13 @@ namespace Cornfield.Blackjack.Library.Test
             BlackjackHand pHand = new BlackjackHand(0);
             BlackjackHand dHand = new BlackjackHand(0);
 
-            pHand.AddCard(new CardBase(SuitlessCards.Ten, Suits.Diamonds));
-            pHand.AddCard(new CardBase(SuitlessCards.Nine, Suits.Clubs));
+            pHand.AddCard(MockCards.Ten);
+            pHand.AddCard(MockCards.Nine);
 
-            dHand.AddCard(new CardBase(SuitlessCards.Six, Suits.Hearts));
-            dHand.AddCard(new CardBase(SuitlessCards.Nine, Suits.Spades));
-            dHand.AddCard(new CardBase(SuitlessCards.Two, Suits.Spades));
+            dHand.AddCard(MockCards.Six);
+            dHand.AddCard(MockCards.Nine);
+            dHand.AddCard(MockCards.Two);
+
 
             Assert.AreEqual(19, pHand.Score, "Expected player's Score to be 19, got {0}.", pHand.Score);
             Assert.AreEqual(17, dHand.Score, "Expected dealer's Score to be 17, got {0}.", dHand.Score);

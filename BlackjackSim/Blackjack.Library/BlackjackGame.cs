@@ -22,7 +22,7 @@ namespace Cornfield.Blackjack.Library
 
         public void StartHand()
         {
-            CardBase card;
+            ICard card;
 
             Table.ClearHands();
             Table.PlaceBets();
@@ -36,12 +36,15 @@ namespace Cornfield.Blackjack.Library
                 {
                     card = Table.Deck.Pop();
                     Table.CountCard(card);
-                    seat.Hands[0].AddCard(card);
+                    seat.Hands[0].DealCard(card);
                 }
                 card = Table.Deck.Pop();
                 Table.CountCard(card);
                 Table.Dealer.Hand.AddCard(card);
             }
+
+            foreach (BlackjackSeat seat in Table.Seats)
+                seat.Hands[0].CalculateScore();
 
             Table.Info.DealerUpCard = Table.Dealer.VisibleCard;
         }
@@ -83,7 +86,7 @@ namespace Cornfield.Blackjack.Library
                 for (int i = handIndex + 1; i < seat.Hands.Count(); i++)
                 {
                     // Player must take at least 1 card after the split
-                    CardBase card = Table.Deck.Pop();
+                    ICard card = Table.Deck.Pop();
                     Table.CountCard(card);
                     seat.Hands[i].AddCard(card);
                     PlaySeatHand(seat, i);
@@ -93,7 +96,7 @@ namespace Cornfield.Blackjack.Library
 
         private void PlayHandAction(BlackjackSeat seat, int handIndex, BlackjackActions action)
         {
-            CardBase card;
+            ICard card;
 
             switch (action)
             {
@@ -142,7 +145,7 @@ namespace Cornfield.Blackjack.Library
             switch (action)
             {
                 case BlackjackActions.Hit:
-                    CardBase card = Table.Deck.Pop();
+                    ICard card = Table.Deck.Pop();
                     Table.CountCard(card);
                     Table.Dealer.Hand.AddCard(card);
                     break;
@@ -164,7 +167,7 @@ namespace Cornfield.Blackjack.Library
             else if (hand.Flags.HasFlag(BlackjackHandFlags.Win))
                 seat.Chips += hand.Bet * 2;
 
-            seat.Player.CountOutcomes(hand.Flags);
+            seat.CountOutcomes(hand.Flags);
         }
 
         public void PrintStats()

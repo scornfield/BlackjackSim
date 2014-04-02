@@ -6,11 +6,26 @@ using System.Threading.Tasks;
 
 namespace Cornfield.Blackjack.Library
 {
-    public class BlackjackSeat
+    public class BlackjackSeat: IBlackjackOutcomeCounter
     {
+        public int Wins { get; set; }
+        public int Losses { get; set; }
+        public int Busts { get; set; }
+        public int Pushes { get; set; }
+        public int Blackjacks { get; set; }
+        public Dictionary<string, object> OtherInfo { get; set; }
+
         public BlackjackPlayerBase Player { get; set; }
         public BlackjackHandCollection Hands { get; set; }
         public double Chips { get; set; }
+
+        public string Name
+        {
+            get
+            {
+                return Player.Name;
+            }
+        }
 
         public BlackjackSeat(BlackjackPlayerBase player, double inChips)
         {
@@ -25,12 +40,12 @@ namespace Cornfield.Blackjack.Library
                 object[] objs = new object[8];
                 objs[0] = Player.Name;
                 objs[1] = Chips;
-                objs[2] = Player.Wins;
-                objs[3] = Player.Losses;
-                objs[4] = Player.Pushes;
-                objs[5] = Player.Busts;
-                objs[6] = Player.Blackjacks;
-                objs[7] = Player.OtherInfo;
+                objs[2] = Wins;
+                objs[3] = Losses;
+                objs[4] = Busts;
+                objs[5] = Pushes;
+                objs[6] = Blackjacks;
+                objs[7] = OtherInfo;
 
                 return objs;
             }
@@ -38,7 +53,12 @@ namespace Cornfield.Blackjack.Library
 
         public override string ToString()
         {
-            return string.Format("{0}{1,14:N0}", Player, Chips);
+            return string.Format("{0,-12}{1,8}{2,8}{3,8}{4,8}{5,8}{1,14:N0}", Name, Wins, Losses, Pushes, Busts, Blackjacks, Chips);
+        }
+
+        public void PrintStats()
+        {
+            Console.WriteLine(this.ToString());
         }
     }
 }

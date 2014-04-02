@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Cornfield.CardGame.Library
 {
-    public class CardCollection : System.Collections.ObjectModel.Collection<CardBase>
+    public class CardCollection : System.Collections.ObjectModel.Collection<ICard>
     {
         public CardCollection() : base()
         {
-
+            
         }
 
         public override string ToString()

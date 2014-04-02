@@ -36,7 +36,7 @@ namespace Cornfield.CardGame.Library.Test
             deck.Add(TwoOfSpades);
             deck.Add(ThreeOfSpades);
 
-            CardBase card = deck.Pop();
+            ICard card = deck.Pop();
             Assert.AreEqual(AceOfSpades, card, "The deck did not pull the expected Ace of Spades card.");
 
             card = deck.Pop();
@@ -69,7 +69,7 @@ namespace Cornfield.CardGame.Library.Test
 
             Assert.AreEqual(orderedDeck.Count, shuffledDeck.Count, "The shuffled deck should have the same number of cards as the ordered deck.");
             Assert.AreEqual(52, shuffledDeck.Count, "The shuffled deck should have 52 cards in it.");
-            Assert.AreEqual(52, orderedDeck.Count, "The ordered deck should have 42 cards in it.");
+            Assert.AreEqual(52, orderedDeck.Count, "The ordered deck should have 52 cards in it.");
 
             int matchedCards = 0;
             for(int i = 0; i < orderedDeck.Count; i++)

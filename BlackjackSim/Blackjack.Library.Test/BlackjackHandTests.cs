@@ -17,6 +17,17 @@ namespace Cornfield.Blackjack.Library.Test
         }
 
         [TestMethod]
+        public void BlackjackHand_DealCardTest()
+        {
+            BlackjackHand hand = new BlackjackHand(10);
+
+            hand.DealCard(new CardBase(SuitlessCards.Five, Suits.Diamonds));
+
+            Assert.AreEqual(1, hand.Count, "The hand should have 1 card in it, but we found {0} card(s).", hand.Count);
+            Assert.AreEqual(0, hand.Score, "The hand's score should be 0, because DealCard doesn't calculate the score, but it's {0}.", hand.Score);
+        }
+
+        [TestMethod]
         public void BlackjackHand_AddCardTest()
         {
             BlackjackHand hand = new BlackjackHand(10);
@@ -73,7 +84,7 @@ namespace Cornfield.Blackjack.Library.Test
             hand.AddCard(new CardBase(SuitlessCards.Eight, Suits.Diamonds));
             hand.AddCard(new CardBase(SuitlessCards.Eight, Suits.Clubs));
 
-            CardBase splitCard = hand.Split();
+            ICard splitCard = hand.Split();
 
             Assert.AreEqual(8, hand.Score, "The hand should now have a score of 8 after splitting.");
             Assert.AreEqual(1, hand.Count, "The hand should now have 1 card after splitting.");

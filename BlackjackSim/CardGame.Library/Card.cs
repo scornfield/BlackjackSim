@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Cornfield.CardGame.Library
 {
-    public class CardBase
+    public interface ICard
+    {
+        CardSuit Suit { get; }
+        SuitlessCardBase Card { get; }
+    }
+
+    public class CardBase : ICard
     {
         public CardSuit Suit { get; private set;  }
         public SuitlessCardBase Card { get; private set; }

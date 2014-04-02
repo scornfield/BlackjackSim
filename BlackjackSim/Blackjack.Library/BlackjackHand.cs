@@ -20,36 +20,41 @@ namespace Cornfield.Blackjack.Library
 
         public BlackjackHandFlags Flags { get; set; }
 
-        public void AddCard(CardBase inCard)
+        public void DealCard(ICard inCard)
         {
             Add(inCard);
-            calcScore();
+        }
+        
+        public void AddCard(ICard inCard)
+        {
+            Add(inCard);
+            CalculateScore();
         }
 
         #region Actions
         
-        public void Hit(CardBase inCard)
+        public void Hit(ICard inCard)
         {
             AddCard(inCard);
         }
 
-        public void DoubleDown(CardBase inCard)
+        public void DoubleDown(ICard inCard)
         {
             Bet *= 2;
             AddCard(inCard);
         }
 
-        public CardBase Split()
+        public ICard Split()
         {
-            CardBase tmp = this[0];
+            ICard tmp = this[0];
             RemoveAt(0);
-            calcScore();
+            CalculateScore();
             return tmp;
         }
         
         #endregion
 
-        private void calcScore()
+        public void CalculateScore()
         {
             Score = BlackjackHandEvaluator.CalculateScore(this);
         }
@@ -67,7 +72,6 @@ namespace Cornfield.Blackjack.Library
                 return string.Join("", this.Select((card) => card.Card.ToString()));
             }
         }
-
     }
 
     public class BlackjackHandCollection : System.Collections.ObjectModel.Collection<BlackjackHand>

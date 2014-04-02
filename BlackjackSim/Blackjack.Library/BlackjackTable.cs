@@ -58,7 +58,7 @@ namespace Cornfield.Blackjack.Library
             }
         }
 
-        public void CountCard(CardBase card)
+        public void CountCard(ICard card)
         {
             if (Info.CardCounts.ContainsKey(card.Card))
                 Info.CardCounts[card.Card] += 1;
@@ -70,7 +70,7 @@ namespace Cornfield.Blackjack.Library
         {
             foreach(BlackjackSeat seat in Seats)
             {
-                seat.Player.ClearOutcomes();
+                seat.ClearOutcomes();
             }
         }
     }
@@ -79,7 +79,7 @@ namespace Cornfield.Blackjack.Library
     {
         public int NumDecks { get; private set; }
         public Dictionary<SuitlessCardBase, int> CardCounts { get; private set; }
-        public CardBase DealerUpCard { get; set; }
+        public ICard DealerUpCard { get; set; }
 
         public BlackjackTableInfo(int inNumDecks)
         {

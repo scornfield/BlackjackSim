@@ -21,24 +21,27 @@ namespace Cornfield.CardGame.Library
             {
                 int k = rng.Next(n);
                 --n;
-                CardBase temp = this[n];
+                ICard temp = this[n];
                 this[n] = this[k];
                 this[k] = temp;
             }
         }
 
-        public CardBase Pop()
+        public ICard Pop()
         {
-            CardBase tmp = this[0];
+            ICard tmp = this[0];
             this.RemoveAt(0);
             return tmp;
         }
 
         public void AddStandardDeck()
         {
-            foreach (SuitlessCardBase card in SuitlessCards.getAllCards())
+            System.Collections.ObjectModel.Collection<SuitlessCardBase> cards = SuitlessCards.getAllCards();
+            System.Collections.ObjectModel.Collection<CardSuit> suits = Suits.getAllSuits();
+
+            foreach (SuitlessCardBase card in cards)
             {
-                foreach (CardSuit suit in Suits.getAllSuits())
+                foreach (CardSuit suit in suits)
                 {
                     this.Add(new CardBase(card, suit));
                 }

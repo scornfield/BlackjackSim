@@ -26,9 +26,11 @@ namespace Cornfield.Blackjack.Library
     {
         public const int BUST_SCORE = 22;
 
-        public static int CardValue(CardBase card)
+        public static int CardValue(ICard card)
         {
-            if (card.Card == SuitlessCards.Ace)
+            if (card.Card == SuitlessCards.King || card.Card == SuitlessCards.Queen || card.Card == SuitlessCards.Jack || card.Card == SuitlessCards.Ten)
+                return 10;
+            else if (card.Card == SuitlessCards.Ace)
                 return 11;
             else if (card.Card == SuitlessCards.Two)
                 return 2;
@@ -47,7 +49,7 @@ namespace Cornfield.Blackjack.Library
             else if (card.Card == SuitlessCards.Nine)
                 return 9;
             else
-                return 10;
+                throw new BlackjackHandEvaluationException(string.Format("Cannot find value for card: %s", card));
         }
 
         public static int CalculateScore(BlackjackHand hand)
@@ -57,7 +59,7 @@ namespace Cornfield.Blackjack.Library
 
             hand.Flags = BlackjackHandFlags.None;
 
-            foreach (CardBase card in hand)
+            foreach (ICard card in hand)
             {
                 if (card.Card == SuitlessCards.Ace)
                     aces.Add(card);
@@ -65,7 +67,7 @@ namespace Cornfield.Blackjack.Library
                     tScore += CardValue(card);
             }
 
-            foreach (CardBase ace in aces)
+            foreach (ICard ace in aces)
             {
                 if (tScore + 11 >= BUST_SCORE)
                     tScore += 1;

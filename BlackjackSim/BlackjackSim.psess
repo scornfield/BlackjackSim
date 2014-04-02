@@ -69,19 +69,19 @@
   </Binaries>
   <Reports>
     <Report>
-      <Path>BlackjackSim130707.vsp</Path>
+      <Path>10000 Hands.vsp</Path>
     </Report>
     <Report>
-      <Path>BlackjackSim130707(1).vsp</Path>
+      <Path>100000 Hands.vsp</Path>
     </Report>
     <Report>
-      <Path>BlackjackSim130919.vsp</Path>
+      <Path>100000 Hands - After Fix Deck Init.vsp</Path>
     </Report>
     <Report>
-      <Path>BlackjackSim130919(1).vsp</Path>
+      <Path>100000 Hands - After Fix CalculateScore During Dealing.vsp</Path>
     </Report>
     <Report>
-      <Path>BlackjackSim130919(2).vsp</Path>
+      <Path>1000000 Hands</Path>
     </Report>
   </Reports>
   <Launches>

@@ -44,6 +44,7 @@
     <Compile Include="BlackjackGame.cs" />
     <Compile Include="BlackjackHandEvaluator.cs" />
     <Compile Include="BlackjackHand.cs" />
+    <Compile Include="BlackjackOutcomeCounter.cs" />
     <Compile Include="BlackjackPlayerBase.cs" />
     <Compile Include="BlackjackRules.cs" />
     <Compile Include="BlackjackSeat.cs" />

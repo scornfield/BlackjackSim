@@ -12,13 +12,13 @@ namespace Cornfield.Blackjack.Library.Test
         {
             BlackjackHand hand = new BlackjackHand(0);
 
-            hand.AddCard(new CardBase(SuitlessCards.Five, Suits.Diamonds));
+            hand.AddCard(MockCards.Five);
             Assert.IsFalse(BlackjackRules.CanDouble(hand), "You should not be able to double this hand: {0}", hand.ToString());
 
-            hand.AddCard(new CardBase(SuitlessCards.Six, Suits.Clubs));
+            hand.AddCard(MockCards.Six);
             Assert.IsTrue(BlackjackRules.CanDouble(hand), "You should be able to double this hand: {0}", hand.ToString());
 
-            hand.AddCard(new CardBase(SuitlessCards.Seven, Suits.Hearts));
+            hand.AddCard(MockCards.Seven);
             Assert.IsFalse(BlackjackRules.CanDouble(hand), "You should not able to double this hand: {0}", hand.ToString());
         }
 
@@ -27,13 +27,13 @@ namespace Cornfield.Blackjack.Library.Test
         {
             BlackjackHand hand = new BlackjackHand(0);
 
-            hand.AddCard(new CardBase(SuitlessCards.Five, Suits.Diamonds));
+            hand.AddCard(MockCards.Five);
             Assert.IsFalse(BlackjackRules.CanSplit(hand), "You should not be able to split this hand: {0}", hand.ToString());
 
-            hand.AddCard(new CardBase(SuitlessCards.Five, Suits.Hearts));
+            hand.AddCard(MockCards.Five);
             Assert.IsTrue(BlackjackRules.CanSplit(hand), "You should be able to split this hand: {0}", hand.ToString());
 
-            hand.AddCard(new CardBase(SuitlessCards.Five, Suits.Spades));
+            hand.AddCard(MockCards.Five);
             Assert.IsFalse(BlackjackRules.CanSplit(hand), "You should not be able to split this hand: {0}", hand.ToString());
         }
 
@@ -42,10 +42,10 @@ namespace Cornfield.Blackjack.Library.Test
         {
             BlackjackHand hand = new BlackjackHand(0);
 
-            hand.AddCard(new CardBase(SuitlessCards.Ten, Suits.Diamonds));
+            hand.AddCard(MockCards.Ten);
             Assert.IsFalse(BlackjackRules.CanSplit(hand), "You should not be able to split this hand: {0}", hand.ToString());
 
-            hand.AddCard(new CardBase(SuitlessCards.King, Suits.Hearts));
+            hand.AddCard(MockCards.King);
             Assert.IsTrue(BlackjackRules.CanSplit(hand), "You should be able to split this hand: {0}", hand.ToString());
         }
 
@@ -54,10 +54,10 @@ namespace Cornfield.Blackjack.Library.Test
         {
             BlackjackHand hand = new BlackjackHand(0);
 
-            hand.AddCard(new CardBase(SuitlessCards.Seven, Suits.Diamonds));
+            hand.AddCard(MockCards.Seven);
             Assert.IsFalse(BlackjackRules.CanSplit(hand), "You should not be able to split this hand: {0}", hand.ToString());
 
-            hand.AddCard(new CardBase(SuitlessCards.Eight, Suits.Diamonds));
+            hand.AddCard(MockCards.Eight);
             Assert.IsFalse(BlackjackRules.CanSplit(hand), "You should not be able to split this hand: {0}", hand.ToString());
         }
 
@@ -66,10 +66,10 @@ namespace Cornfield.Blackjack.Library.Test
         {
             BlackjackHand hand = new BlackjackHand(0);
 
-            hand.AddCard(new CardBase(SuitlessCards.Seven, Suits.Diamonds));
+            hand.AddCard(MockCards.Seven);
             Assert.IsFalse(BlackjackRules.CanSurrender(hand), "You should not be able to surrender this hand: {0}", hand.ToString());
 
-            hand.AddCard(new CardBase(SuitlessCards.Nine, Suits.Clubs));
+            hand.AddCard(MockCards.Nine);
             Assert.IsFalse(BlackjackRules.CanSurrender(hand), "You should not be able to surrender this hand: {0}", hand.ToString());
         }
     }

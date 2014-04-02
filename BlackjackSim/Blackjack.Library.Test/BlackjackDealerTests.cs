@@ -14,13 +14,6 @@ namespace Cornfield.Blackjack.Library.Test
 
             Assert.AreEqual("Dealer", dealer.Name, "The dealer's name should be 'Dealer'.");
             Assert.AreEqual(0, dealer.Bet, "The dealer's bet should be 0.");
-
-            Assert.AreEqual(0, dealer.Wins, "Dealer has not played any hands yet, should have 0 wins.");
-            Assert.AreEqual(0, dealer.Losses, "Dealer has not played any hands yet, should have 0 losses.");
-            Assert.AreEqual(0, dealer.Busts, "Dealer has not played any hands yet, should have 0 busts.");
-            Assert.AreEqual(0, dealer.Pushes, "Dealer has not played any hands yet, should have 0 pushes.");
-            Assert.AreEqual(0, dealer.Blackjacks, "Dealer has not played any hands yet, should have 0 blackjacks.");
-            Assert.AreEqual(string.Empty, dealer.OtherInfo, "Dealer has not played any hands yet, should have no other info.");
         }
 
         [TestMethod]
@@ -46,14 +39,14 @@ namespace Cornfield.Blackjack.Library.Test
         {
             BlackjackDealer dealer = new BlackjackDealer();
 
-            dealer.Hand.AddCard(new CardBase(SuitlessCards.Five, Suits.Diamonds));
-            dealer.Hand.AddCard(new CardBase(SuitlessCards.Five, Suits.Spades));
+            dealer.Hand.AddCard(MockCards.Five);
+            dealer.Hand.AddCard(MockCards.Five);
             BlackjackActions action = dealer.Play();
             Assert.AreEqual(BlackjackActions.Hit, action, "The dealer should always hit on anything under 17.");
 
             dealer.Hand.Clear();
-            dealer.Hand.AddCard(new CardBase(SuitlessCards.Six, Suits.Diamonds));
-            dealer.Hand.AddCard(new CardBase(SuitlessCards.Ten, Suits.Spades));
+            dealer.Hand.AddCard(MockCards.Six);
+            dealer.Hand.AddCard(MockCards.Ten);
             action = dealer.Play();
             Assert.AreEqual(BlackjackActions.Hit, action, "The dealer should always hit on anything under 17.");
         }
@@ -63,14 +56,14 @@ namespace Cornfield.Blackjack.Library.Test
         {
             BlackjackDealer dealer = new BlackjackDealer();
 
-            dealer.Hand.AddCard(new CardBase(SuitlessCards.King, Suits.Diamonds));
-            dealer.Hand.AddCard(new CardBase(SuitlessCards.Seven, Suits.Spades));
+            dealer.Hand.AddCard(MockCards.King);
+            dealer.Hand.AddCard(MockCards.Eight);
             BlackjackActions action = dealer.Play();
             Assert.AreEqual(BlackjackActions.Stand, action, "The dealer should always stand on anything over 17.");
 
             dealer.Hand.Clear();
-            dealer.Hand.AddCard(new CardBase(SuitlessCards.Ace, Suits.Diamonds));
-            dealer.Hand.AddCard(new CardBase(SuitlessCards.Eight, Suits.Spades));
+            dealer.Hand.AddCard(MockCards.Eight);
+            dealer.Hand.AddCard(MockCards.Ace);
             action = dealer.Play();
             Assert.AreEqual(BlackjackActions.Stand, action, "The dealer should always stand on anything over 17.");
         }
@@ -80,14 +73,14 @@ namespace Cornfield.Blackjack.Library.Test
         {
             BlackjackDealer dealer = new BlackjackDealer();
 
-            dealer.Hand.AddCard(new CardBase(SuitlessCards.Ace, Suits.Diamonds));
-            dealer.Hand.AddCard(new CardBase(SuitlessCards.Six, Suits.Spades));
+            dealer.Hand.AddCard(MockCards.Ace);
+            dealer.Hand.AddCard(MockCards.Six);
             BlackjackActions action = dealer.Play();
             Assert.AreEqual(BlackjackActions.Hit, action, "The dealer should hit on a soft 17.");
 
             dealer.Hand.Clear();
-            dealer.Hand.AddCard(new CardBase(SuitlessCards.Jack, Suits.Diamonds));
-            dealer.Hand.AddCard(new CardBase(SuitlessCards.Seven, Suits.Spades));
+            dealer.Hand.AddCard(MockCards.Jack);
+            dealer.Hand.AddCard(MockCards.Seven);
             action = dealer.Play();
             Assert.AreEqual(BlackjackActions.Stand, action, "The dealer should stand on a hard 17.");
         }
@@ -100,6 +93,34 @@ namespace Cornfield.Blackjack.Library.Test
             dealer.Hand.AddCard(new CardBase(SuitlessCards.Ace, Suits.Diamonds));
             dealer.Hand.AddCard(new CardBase(SuitlessCards.Six, Suits.Spades));
             Assert.AreEqual(new CardBase(SuitlessCards.Six, Suits.Spades), dealer.VisibleCard, "The dealer's second card should be visible to the player.");
+        }
+
+        [TestMethod]
+        public void BlackjackDealer_CountOutcomesTest()
+        {
+            BlackjackDealer dealer = new BlackjackDealer();
+
+            BlackjackHandFlags outcome = BlackjackHandFlags.Win;
+
+            dealer.CountOutcomes(outcome);
+            outcome |= BlackjackHandFlags.Lose;
+            dealer.CountOutcomes(outcome);
+            outcome |= BlackjackHandFlags.Bust;
+            dealer.CountOutcomes(outcome);
+            outcome |= BlackjackHandFlags.Push;
+            dealer.CountOutcomes(outcome);
+            outcome |= BlackjackHandFlags.Blackjack;
+            dealer.CountOutcomes(outcome);
+
+            // Dealer only counts Busts and Blackjacks
+            Assert.AreEqual("Dealer", dealer.ObjectArray[0]); // Name
+            Assert.AreEqual(0, dealer.ObjectArray[1]); // Chips
+            Assert.AreEqual(0, dealer.ObjectArray[2]); // Wins
+            Assert.AreEqual(0, dealer.ObjectArray[3]); // Losses
+            Assert.AreEqual(3, dealer.ObjectArray[4]); // Busts
+            Assert.AreEqual(0, dealer.ObjectArray[5]); // Pushes
+            Assert.AreEqual(1, dealer.ObjectArray[6]); // Blackjacks
+
         }
     }
 }

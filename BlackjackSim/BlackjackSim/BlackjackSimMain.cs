@@ -80,7 +80,7 @@ namespace BlackjackSim
             gridStats.Rows.Clear();
             foreach(BlackjackSeat seat in _game.Table.Seats)
                 gridStats.Rows.Add(seat.ObjectArray);
-            gridStats.Rows.Add(new BlackjackSeat(_game.Table.Dealer, 0).ObjectArray);
+            gridStats.Rows.Add(_game.Table.Dealer.ObjectArray);
             gridStats.Refresh();
 
             statusProgressBar.Value = i;
