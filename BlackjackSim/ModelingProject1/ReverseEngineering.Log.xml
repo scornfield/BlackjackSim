@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 11.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2013-07-27T11:51:52" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Cornfield' -  (Package)" />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Cornfield::Blackjack' -  (Package)" />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Cornfield::Blackjack::Library' -  (Package)" />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Cornfield::Blackjack::Library::BlackjackActions' -  (Enumeration)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Cornfield::Blackjack::Library::BlackjackHand' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Cornfield::Blackjack::Library::BlackjackPlayerBase' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Cornfield::Blackjack::Library::BlackjackTableInfo' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Cornfield::Blackjack::Players' -  (Package)" />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Medium" Text="Element reverse engineered into the UML model: 'ModelingProject1::Cornfield::Blackjack::Players::StevePlayer' -  (Class)" />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Cornfield::Blackjack::Players::StevePlayer::Play' -  (Operation)" />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Cornfield::Blackjack::Players::StevePlayer::Play::hand' -  (Parameter)" />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Cornfield::Blackjack::Players::StevePlayer::Play::info' -  (Parameter)" />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Cornfield::Blackjack::Players::StevePlayer::StevePlayer' -  (Operation)" />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Cornfield::Blackjack::Players::StevePlayer::StevePlayer::inBet' -  (Parameter)" />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::Cornfield::Blackjack::Players::StevePlayer::StevePlayer::inName' -  (Parameter)" />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System' -  (Package)" />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ModelingProject1::System::Double' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Cornfield::Blackjack::Players::StevePlayer to ModelingProject1::Cornfield::Blackjack::Library::BlackjackPlayerBase (Generalization)" />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Cornfield::Blackjack::Library::BlackjackPlayerBase to ModelingProject1::Cornfield::Blackjack::Library::IBlackjackPlayer (InterfaceRealization)" />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Cornfield::Blackjack::Library::BlackjackDealer to ModelingProject1::Cornfield::Blackjack::Library::BlackjackPlayerBase (Generalization)" />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Cornfield::Blackjack::Players::WizardOfOddsPlayer to ModelingProject1::Cornfield::Blackjack::Library::BlackjackPlayerBase (Generalization)" />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ModelingProject1::Cornfield::Blackjack::Players::DealerPlayer to ModelingProject1::Cornfield::Blackjack::Library::BlackjackPlayerBase (Generalization)" />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="High" Text="(1) type(s) fully reverse engineered." />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="High" Text="(5) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2013-07-27T11:51:53" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

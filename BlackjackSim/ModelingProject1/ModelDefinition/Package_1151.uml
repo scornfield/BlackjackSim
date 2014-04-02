@@ -1,0 +1,891 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="4d49260e-8edb-404c-bf07-6b298556d372"
+  name="Players"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="d5a63687-8f8e-465b-9336-a064eb3fc4f9"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DCornfield.Blackjack.Players"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="ad33ef3e-9015-4a11-887b-cd1aaab0a9b5"
+        name="WizardOfOddsPlayer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="f639781e-d808-4ad8-8a4c-adf21f77bc12"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Players%2Fbin%2FDebug%2FCornfield.Blackjack.Players.dll&quot; Namespace%3DCornfield.Blackjack.Players Type%3DWizardOfOddsPlayer"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="ab1230a2-077a-44f9-9e09-dfcb7a69d321"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="15167d5b-e48f-41a1-b2f5-dd0d5e5453a8">
+                <propertyInstance
+                  Id="f33844e4-031e-487f-8ab7-ecc8ed8d6f66"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="99586fe7-c452-41dd-81f6-b36b2e9dc9ad">
+                <propertyInstance
+                  Id="9c44e5bc-ca98-4eae-b429-cad2d487c314"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bd7ff236-f367-4cc0-89aa-00618e95f7dc">
+                <propertyInstance
+                  Id="b2caa1f8-52c7-4d02-8750-637fc6595fe9"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="05c40cab-812d-4fe9-8416-61f7f4e9b436">
+                <propertyInstance
+                  Id="70f4cda3-8ca9-4c32-bb7a-e95e0f57b068"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7f23dea9-df78-4821-9715-b35838985374">
+                <propertyInstance
+                  Id="04aeccad-430f-4e3e-a7d1-3cdecf41f719"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="10bb35c0-9151-490c-a82a-909accc53057"
+            isSubstitutable="false">
+            <classMoniker
+              Id="152182c1-89fe-4e10-ae97-8072f4f213db"
+              LastKnownName="BlackjackPlayerBase"
+              LastKnownLocation="Package1_1128.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="6c406dfb-4407-4410-bb2d-122caa3efdd5"
+            name="WizardOfOddsPlayer"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="163d90e5-46fa-42e8-8d00-b9ae4d9b6892"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Players%2Fbin%2FDebug%2FCornfield.Blackjack.Players.dll&quot; Namespace%3DCornfield.Blackjack.Players Type%3DWizardOfOddsPlayer Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0fceeb80-c216-42c0-b5ca-6e60540a20b6"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="231253c4-0b43-4c44-acc4-e0ced508017b">
+                    <propertyInstance
+                      Id="c66a76ff-3ae1-4856-bbc7-6c9249688b62"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5de9fa1-4ca7-4bb9-833d-9ed26c629151">
+                    <propertyInstance
+                      Id="ea9ba5ed-fd9a-4312-a36f-2515fac89d7f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7428282a-b1ed-42f1-9833-7e712321706f">
+                    <propertyInstance
+                      Id="cc7e8798-a167-49c6-ac55-e7218b18f0c7"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="47cbaa10-4aa3-432a-8ade-da9ba0d215d0">
+                    <propertyInstance
+                      Id="f33617a1-76b7-4ead-8c03-a410ba3f6b9e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="721e6340-1d31-4342-9adb-f730693dd5a8">
+                    <propertyInstance
+                      Id="d6e7f4f6-716f-4114-b294-8d90f2b7b526"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a45309a9-ebf5-4b10-b61a-75387e2b22f0">
+                    <propertyInstance
+                      Id="e55635e5-8fe0-425f-b2b0-305cd1056e79"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="49828a55-6701-4709-86bc-d98c467b6347"
+                  name="inName"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="4197cfc2-b336-4df0-915c-532c39397fe8"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Players%2Fbin%2FDebug%2FCornfield.Blackjack.Players.dll&quot; Namespace%3DCornfield.Blackjack.Players Type%3DWizardOfOddsPlayer Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3DinName"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="15fe3543-a0da-4d42-927d-a092dda5f8b1"
+                  name="inBet"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0b6ae83c-35cf-4ea9-bc53-59d40df9479d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Players%2Fbin%2FDebug%2FCornfield.Blackjack.Players.dll&quot; Namespace%3DCornfield.Blackjack.Players Type%3DWizardOfOddsPlayer Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3DinBet"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="05572a44-7756-4ad0-9e13-14ff2f503571"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package3_1126.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e208e970-219c-4480-a1af-3413e62ab66d"
+            name="Play"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3a027464-6029-4857-afdd-cb563599495d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Players%2Fbin%2FDebug%2FCornfield.Blackjack.Players.dll&quot; Namespace%3DCornfield.Blackjack.Players Type%3DWizardOfOddsPlayer Member%3D(Name%3DPlay OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Library%2Fbin%2FDebug%2FCornfield.Blackjack.Library.dll&quot; Namespace%3DCornfield.Blackjack.Library Type%3DBlackjackHand)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Library%2Fbin%2FDebug%2FCornfield.Blackjack.Library.dll&quot; Namespace%3DCornfield.Blackjack.Library Type%3DBlackjackTableInfo)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e8836696-334f-43e4-ae4b-fa85be077df2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="59522362-550b-43d6-9ad4-b1b684d380cb">
+                    <propertyInstance
+                      Id="cf737970-4100-468e-ba3d-0d79a77f5a17"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="116e2367-9780-4a11-be07-3126bf5dd1f8">
+                    <propertyInstance
+                      Id="a3bc143b-75e1-49e3-b105-73affe6956dd"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d6e86a8a-dea8-4ee3-957a-2548e03b408f">
+                    <propertyInstance
+                      Id="76bcdc1a-19d7-4115-94c5-4a6e5fcdadb7"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="114ca790-22f6-47cc-9657-df8352774563">
+                    <propertyInstance
+                      Id="e4829698-f482-442d-aa26-5b1805598422"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1125a278-479e-4071-aea3-e1148c1e1945">
+                    <propertyInstance
+                      Id="716703b4-2d80-4ca6-94ae-726d7d3d5641"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="599e345a-6baa-412f-b963-66fef6bcdd02">
+                    <propertyInstance
+                      Id="fff7a871-e3d1-48b2-9481-d8ab3aa0f3bd"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="eef46a24-e3df-476a-909f-c615798c5430"
+                  direction="Return">
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="e1147b10-f05a-4d7b-848b-2169fcf53055"
+                      LastKnownName="BlackjackActions"
+                      LastKnownLocation="Package1_1128.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fc00eb35-2d0f-4b2f-9b19-083014295756"
+                  name="hand"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8b359cfe-2e13-456a-8908-79cbaebc0cb8"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Players%2Fbin%2FDebug%2FCornfield.Blackjack.Players.dll&quot; Namespace%3DCornfield.Blackjack.Players Type%3DWizardOfOddsPlayer Member%3D(Name%3DPlay OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Library%2Fbin%2FDebug%2FCornfield.Blackjack.Library.dll&quot; Namespace%3DCornfield.Blackjack.Library Type%3DBlackjackHand)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Library%2Fbin%2FDebug%2FCornfield.Blackjack.Library.dll&quot; Namespace%3DCornfield.Blackjack.Library Type%3DBlackjackTableInfo)]) ParameterIdentifier%3Dhand"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0ebeac5f-f6dd-4fce-a7e5-8891642fbbbe"
+                      LastKnownName="BlackjackHand"
+                      LastKnownLocation="Package1_1128.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9c66e7f7-42a9-4165-bade-82656894b98c"
+                  name="info"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="f5b99b69-caac-46b9-84b0-b44ff1d2061e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Players%2Fbin%2FDebug%2FCornfield.Blackjack.Players.dll&quot; Namespace%3DCornfield.Blackjack.Players Type%3DWizardOfOddsPlayer Member%3D(Name%3DPlay OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Library%2Fbin%2FDebug%2FCornfield.Blackjack.Library.dll&quot; Namespace%3DCornfield.Blackjack.Library Type%3DBlackjackHand)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Library%2Fbin%2FDebug%2FCornfield.Blackjack.Library.dll&quot; Namespace%3DCornfield.Blackjack.Library Type%3DBlackjackTableInfo)]) ParameterIdentifier%3Dinfo"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="6eacb29b-3bb7-46dc-9b91-7a4efd9cf1d2"
+                      LastKnownName="BlackjackTableInfo"
+                      LastKnownLocation="Package1_1128.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="703c22f0-7ce2-4c24-9799-eb58f8f4f05e"
+        name="DealerPlayer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="3f85c369-ec60-4890-aac7-6f98a2ab3d7f"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Players%2Fbin%2FDebug%2FCornfield.Blackjack.Players.dll&quot; Namespace%3DCornfield.Blackjack.Players Type%3DDealerPlayer"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7e12890f-c34c-4e80-a674-dc8233f74346"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5b92f140-bd62-49ec-b819-3e3e893292c6">
+                <propertyInstance
+                  Id="bc3c9570-4c88-4be7-b0c5-fe91033997e1"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4f47ae78-40f4-46f3-a961-40b864ccf333">
+                <propertyInstance
+                  Id="60241c86-21b2-41bd-b82b-a5b000cdc7f4"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8327084d-812e-43c9-a887-30fe06ca09fd">
+                <propertyInstance
+                  Id="b777e889-c551-49a7-8284-bae47851028c"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="86b81355-9dfc-4b00-94e1-5e7c07386273">
+                <propertyInstance
+                  Id="c67901fc-24ba-41c5-9145-740d9b2e43e2"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8cd22d1b-3b64-4746-b4d9-44744f29866f">
+                <propertyInstance
+                  Id="e56cadaa-900d-40e7-ba97-30e1712a9df0"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="1d013150-d6d9-440e-b6f1-34908e0cfb7d"
+            isSubstitutable="false">
+            <classMoniker
+              Id="152182c1-89fe-4e10-ae97-8072f4f213db"
+              LastKnownName="BlackjackPlayerBase"
+              LastKnownLocation="Package1_1128.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="bd7362c2-f68e-469c-9fde-33deb61d4fce"
+            name="DealerPlayer"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a683e445-0305-4ac7-a9ce-fd1d864dd847"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Players%2Fbin%2FDebug%2FCornfield.Blackjack.Players.dll&quot; Namespace%3DCornfield.Blackjack.Players Type%3DDealerPlayer Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f7787130-9636-4cbf-9f67-4cbc87e0654e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="534dc862-a3b0-4a5c-8b01-0ea88277bbed">
+                    <propertyInstance
+                      Id="227979ee-c73d-4890-a6ef-8bebfd33169a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="73e6ee95-59c2-49fe-9436-0cc009890f9b">
+                    <propertyInstance
+                      Id="412b8e96-f49d-492f-8119-42f56cd9ea4d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd4b0638-fe6f-49aa-940f-8445f0232948">
+                    <propertyInstance
+                      Id="72e6b87b-3146-4bc8-a95a-ff26a4b92cb4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5c05e34a-20c2-4e12-b391-e1b207cb0b8c">
+                    <propertyInstance
+                      Id="57acdfb3-4e4c-4c19-956a-fafef5e99c91"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="93e1351b-0a5a-4db1-9830-38286dfcffa0">
+                    <propertyInstance
+                      Id="6a84e068-a5e9-4bfd-b2d4-3f987e2aa3ba"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1cf87bbb-5916-48a5-a835-e3c7120e1dee">
+                    <propertyInstance
+                      Id="0f631515-102d-424e-948c-0ccf8760566d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4398c825-77f7-439a-a672-ff74036542e3"
+                  name="inName"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="2d699481-cb6e-4a65-b0f2-95f1184eaa14"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Players%2Fbin%2FDebug%2FCornfield.Blackjack.Players.dll&quot; Namespace%3DCornfield.Blackjack.Players Type%3DDealerPlayer Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3DinName"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4d1e477b-d2b3-4a27-bffc-cd30fb14e35b"
+                  name="inBet"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ddc1e8cc-c204-4b1a-8584-2763fdf65496"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Players%2Fbin%2FDebug%2FCornfield.Blackjack.Players.dll&quot; Namespace%3DCornfield.Blackjack.Players Type%3DDealerPlayer Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3DinBet"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="05572a44-7756-4ad0-9e13-14ff2f503571"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package3_1126.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="212c127d-49ad-473e-9959-1369a76758ab"
+            name="Play"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="886d08d8-2731-4528-92a9-cae41a00a69c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Players%2Fbin%2FDebug%2FCornfield.Blackjack.Players.dll&quot; Namespace%3DCornfield.Blackjack.Players Type%3DDealerPlayer Member%3D(Name%3DPlay OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Library%2Fbin%2FDebug%2FCornfield.Blackjack.Library.dll&quot; Namespace%3DCornfield.Blackjack.Library Type%3DBlackjackHand)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Library%2Fbin%2FDebug%2FCornfield.Blackjack.Library.dll&quot; Namespace%3DCornfield.Blackjack.Library Type%3DBlackjackTableInfo)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="69fad438-7aac-4c76-aa81-27a0e3eb657b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f3c85245-860d-4eef-b3a2-f86cd63cff2f">
+                    <propertyInstance
+                      Id="addbbb0e-32bb-4a77-8eb2-635d68b90344"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9ea3980b-8381-4ebc-9c26-1cd31874761a">
+                    <propertyInstance
+                      Id="3a6a022b-3a3d-4bbc-96f2-258fad65027e"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1e8ea845-cfa0-4c89-a36f-07448c605620">
+                    <propertyInstance
+                      Id="e5f0c625-6019-404a-b81b-15dbcba7b4c0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="26e05ccb-0bd9-425a-aa5e-f79f66bc8444">
+                    <propertyInstance
+                      Id="38cd8edd-f819-4ab7-976a-86b4fd4e0211"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ce705e53-0489-42bc-ac3e-f7f6a14bda51">
+                    <propertyInstance
+                      Id="ac3db89f-902b-4794-83e9-bcce435bce33"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ce913a45-f99f-4dce-a632-b97db14b4957">
+                    <propertyInstance
+                      Id="734ade1d-8f7e-4e19-b544-3d5589c5efe2"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8711d18e-d955-4552-b33c-442dc99b6d4a"
+                  direction="Return">
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="e1147b10-f05a-4d7b-848b-2169fcf53055"
+                      LastKnownName="BlackjackActions"
+                      LastKnownLocation="Package1_1128.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6e3d0a4c-f48a-4a93-b5a8-09a5b0dab14c"
+                  name="hand"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="a5d3a3f5-b997-4818-b049-f696db1e1383"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Players%2Fbin%2FDebug%2FCornfield.Blackjack.Players.dll&quot; Namespace%3DCornfield.Blackjack.Players Type%3DDealerPlayer Member%3D(Name%3DPlay OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Library%2Fbin%2FDebug%2FCornfield.Blackjack.Library.dll&quot; Namespace%3DCornfield.Blackjack.Library Type%3DBlackjackHand)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Library%2Fbin%2FDebug%2FCornfield.Blackjack.Library.dll&quot; Namespace%3DCornfield.Blackjack.Library Type%3DBlackjackTableInfo)]) ParameterIdentifier%3Dhand"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0ebeac5f-f6dd-4fce-a7e5-8891642fbbbe"
+                      LastKnownName="BlackjackHand"
+                      LastKnownLocation="Package1_1128.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1a23fbe3-ef2c-4475-af19-a1716d6003da"
+                  name="info"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="fc1da3e9-3a17-4003-8d3c-ffb7219e0a2b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Players%2Fbin%2FDebug%2FCornfield.Blackjack.Players.dll&quot; Namespace%3DCornfield.Blackjack.Players Type%3DDealerPlayer Member%3D(Name%3DPlay OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Library%2Fbin%2FDebug%2FCornfield.Blackjack.Library.dll&quot; Namespace%3DCornfield.Blackjack.Library Type%3DBlackjackHand)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Library%2Fbin%2FDebug%2FCornfield.Blackjack.Library.dll&quot; Namespace%3DCornfield.Blackjack.Library Type%3DBlackjackTableInfo)]) ParameterIdentifier%3Dinfo"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="6eacb29b-3bb7-46dc-9b91-7a4efd9cf1d2"
+                      LastKnownName="BlackjackTableInfo"
+                      LastKnownLocation="Package1_1128.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="50de185c-c545-4b1b-bd6e-9cf23a1a1a5a"
+        name="StevePlayer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="55bbdb3f-a4ac-4f0f-9908-87c00845af7b"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Players%2Fbin%2FDebug%2FCornfield.Blackjack.Players.dll&quot; Namespace%3DCornfield.Blackjack.Players Type%3DStevePlayer"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="98e55c73-d462-45a6-9b90-40cebcd8091f"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8191155f-b025-40ac-989e-58717b689057">
+                <propertyInstance
+                  Id="b11dbda5-7b18-4ef2-85e9-b2e67ed44d72"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="678fc883-c385-4fed-ac89-e5a71e9e50fb">
+                <propertyInstance
+                  Id="115b1b2d-bfd8-4e8b-8399-e010ee3e253d"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4714e90f-ea61-4f5e-a693-2ff5eb559563">
+                <propertyInstance
+                  Id="a6ce38be-2120-4c32-9cce-2455e6e6bb27"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b8025435-1e6e-4831-be3e-f06e43f8a5f1">
+                <propertyInstance
+                  Id="55b70bed-1046-4324-9f22-ad8af56b6c1f"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="056175a9-c2c7-43af-9588-d63f8dbec70c">
+                <propertyInstance
+                  Id="5de64e72-bc1d-44a5-a627-08ce7b8a02c4"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="bdcc0c3b-bc11-4331-bca2-bedaa1228e40"
+            isSubstitutable="false">
+            <classMoniker
+              Id="152182c1-89fe-4e10-ae97-8072f4f213db"
+              LastKnownName="BlackjackPlayerBase"
+              LastKnownLocation="Package1_1128.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="e4e0a784-20ea-403b-a7f2-39fda8d2c162"
+            name="StevePlayer"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="de581cc4-1944-4632-bfa3-2736fa43c981"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Players%2Fbin%2FDebug%2FCornfield.Blackjack.Players.dll&quot; Namespace%3DCornfield.Blackjack.Players Type%3DStevePlayer Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6c93459c-2289-4dd0-a42e-766f4bc055c0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9729f1a2-42bd-46ed-86c7-b5552db65987">
+                    <propertyInstance
+                      Id="06e0c9c8-0d37-4eff-bf0a-b16cbe09694f"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f699e529-659e-47cf-a957-457dea4c8287">
+                    <propertyInstance
+                      Id="2014d60c-fa77-434d-8e64-da581e5973d9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0d5566eb-74ce-4bc7-b57e-60ac5e907334">
+                    <propertyInstance
+                      Id="f17d3a25-1ea0-4ebd-83a6-25274a0d1ebe"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f6a09e6e-06f6-4e3d-af38-e1e98b4db136">
+                    <propertyInstance
+                      Id="af54394a-178d-47e0-9c75-3a42485d4bb6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e91e38a6-460e-41e3-9974-469265249b38">
+                    <propertyInstance
+                      Id="1e8d5acd-03c5-45e1-a0bb-4c8ca1272e35"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ec0436c7-4577-4cac-bbd5-ae9de3256584">
+                    <propertyInstance
+                      Id="4dcd6ae2-96fb-4029-80e3-7d693e14b7d1"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1ce8be26-b934-437e-ae34-516cd3b0c662"
+                  name="inName"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d08b79c7-4db2-4054-a6e2-81fdc326cedf"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Players%2Fbin%2FDebug%2FCornfield.Blackjack.Players.dll&quot; Namespace%3DCornfield.Blackjack.Players Type%3DStevePlayer Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3DinName"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f4f043d7-eba9-4786-9001-98fc7a33746b"
+                  name="inBet"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="78cc3dcc-7f99-4c42-b928-7046933a7411"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Players%2Fbin%2FDebug%2FCornfield.Blackjack.Players.dll&quot; Namespace%3DCornfield.Blackjack.Players Type%3DStevePlayer Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDouble)]) ParameterIdentifier%3DinBet"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="05572a44-7756-4ad0-9e13-14ff2f503571"
+                      LastKnownName="Double"
+                      LastKnownLocation="Package3_1126.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="361d9de5-351b-4b61-a3ef-ae90c853bd9e"
+            name="Play"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="764bd1ba-85dc-4e68-b4af-c9922acef70f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Players%2Fbin%2FDebug%2FCornfield.Blackjack.Players.dll&quot; Namespace%3DCornfield.Blackjack.Players Type%3DStevePlayer Member%3D(Name%3DPlay OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Library%2Fbin%2FDebug%2FCornfield.Blackjack.Library.dll&quot; Namespace%3DCornfield.Blackjack.Library Type%3DBlackjackHand)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Library%2Fbin%2FDebug%2FCornfield.Blackjack.Library.dll&quot; Namespace%3DCornfield.Blackjack.Library Type%3DBlackjackTableInfo)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="827930b7-4f26-4dfc-8e0a-9ee005212bf5"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="91b370f4-c119-4359-b8ff-3baa4c59b128">
+                    <propertyInstance
+                      Id="45797740-2971-4181-868c-1878d7bf4cc0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dc727cf5-6d80-49f7-bae1-eea3937618b3">
+                    <propertyInstance
+                      Id="955aa615-56cf-4f08-872c-c778630ab505"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="124b380f-22dd-44e4-ab5a-47a6e53276d7">
+                    <propertyInstance
+                      Id="2f04b066-a8e6-4ff3-a3ad-ceddec650049"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="335dc42a-1613-4587-9f18-97dfa0ac45ad">
+                    <propertyInstance
+                      Id="819ecdfc-17bb-49ce-a814-60b5312a3755"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="784ae5d6-eb7c-4c81-b6e4-dd194920481e">
+                    <propertyInstance
+                      Id="83f0f02f-56e5-427c-be1e-3830bbc5d750"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd972794-28c4-4b60-a53a-3bc18eb62134">
+                    <propertyInstance
+                      Id="16a402d9-922f-425a-8cc1-5f7f24ffc599"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4ed6f8b0-f815-41b6-8d33-35a4a7e9eff3"
+                  direction="Return">
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="e1147b10-f05a-4d7b-848b-2169fcf53055"
+                      LastKnownName="BlackjackActions"
+                      LastKnownLocation="Package1_1128.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="594eb359-b571-42db-98ff-e4e48c36f4cf"
+                  name="hand"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="1b31b849-df7f-4b71-a56c-362ce49b4df8"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Players%2Fbin%2FDebug%2FCornfield.Blackjack.Players.dll&quot; Namespace%3DCornfield.Blackjack.Players Type%3DStevePlayer Member%3D(Name%3DPlay OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Library%2Fbin%2FDebug%2FCornfield.Blackjack.Library.dll&quot; Namespace%3DCornfield.Blackjack.Library Type%3DBlackjackHand)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Library%2Fbin%2FDebug%2FCornfield.Blackjack.Library.dll&quot; Namespace%3DCornfield.Blackjack.Library Type%3DBlackjackTableInfo)]) ParameterIdentifier%3Dhand"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="0ebeac5f-f6dd-4fce-a7e5-8891642fbbbe"
+                      LastKnownName="BlackjackHand"
+                      LastKnownLocation="Package1_1128.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="01412e45-0aa1-41e5-bf91-7528dfc9559c"
+                  name="info"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="6a76d119-998a-46c6-98e2-382d93dea820"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Players%2Fbin%2FDebug%2FCornfield.Blackjack.Players.dll&quot; Namespace%3DCornfield.Blackjack.Players Type%3DStevePlayer Member%3D(Name%3DPlay OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Library%2Fbin%2FDebug%2FCornfield.Blackjack.Library.dll&quot; Namespace%3DCornfield.Blackjack.Library Type%3DBlackjackHand)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSteven%2Fdocuments%2Fvisual studio 2012%2FProjects%2FBlackjackSim%2FBlackjack.Library%2Fbin%2FDebug%2FCornfield.Blackjack.Library.dll&quot; Namespace%3DCornfield.Blackjack.Library Type%3DBlackjackTableInfo)]) ParameterIdentifier%3Dinfo"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="6eacb29b-3bb7-46dc-9b91-7a4efd9cf1d2"
+                      LastKnownName="BlackjackTableInfo"
+                      LastKnownLocation="Package1_1128.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

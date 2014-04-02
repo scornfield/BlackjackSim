@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="e0f9fef6-21c8-420c-9fbf-32132b0a27c2"
+  name="Blackjack"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="e995794b-c4fc-4e8c-8a83-db163ad0b462"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DCornfield.Blackjack"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="9bcbf257-3ee2-40c8-b4d2-56507ba429f6"
+        LastKnownName="Library"
+        LastKnownLocation="Package1_1128.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="4d49260e-8edb-404c-bf07-6b298556d372"
+        LastKnownName="Players"
+        LastKnownLocation="Package_1151.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

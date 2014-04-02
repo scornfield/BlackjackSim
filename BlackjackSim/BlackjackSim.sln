@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackjackSim", "BlackjackSim\BlackjackSim.csproj", "{10CCC9ED-C2EA-47B9-877B-D7F18C791318}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackjack.Library", "Blackjack.Library\Blackjack.Library.csproj", "{EE2D966D-470E-44C9-8DE3-69F7B7D47877}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardGame.Library", "CardGame.Library\CardGame.Library.csproj", "{B05F6454-786B-4F26-8628-F07CD433F380}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackjack.Players", "Blackjack.Players\Blackjack.Players.csproj", "{3286E0E7-D632-471D-ACFB-5333949127CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackjack.Library.Test", "Blackjack.Library.Test\Blackjack.Library.Test.csproj", "{111DE082-AED9-4A6D-A974-F46F02E73B05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardGame.Library.Test", "CardGame.Library.Test\CardGame.Library.Test.csproj", "{E6BBCBCE-5B3A-4BA9-B6D2-989E923561D7}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject1", "ModelingProject1\ModelingProject1.modelproj", "{D769358C-BB6B-4B89-87F0-1B96717DF981}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10CCC9ED-C2EA-47B9-877B-D7F18C791318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10CCC9ED-C2EA-47B9-877B-D7F18C791318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10CCC9ED-C2EA-47B9-877B-D7F18C791318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10CCC9ED-C2EA-47B9-877B-D7F18C791318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE2D966D-470E-44C9-8DE3-69F7B7D47877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE2D966D-470E-44C9-8DE3-69F7B7D47877}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE2D966D-470E-44C9-8DE3-69F7B7D47877}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE2D966D-470E-44C9-8DE3-69F7B7D47877}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B05F6454-786B-4F26-8628-F07CD433F380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B05F6454-786B-4F26-8628-F07CD433F380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B05F6454-786B-4F26-8628-F07CD433F380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B05F6454-786B-4F26-8628-F07CD433F380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3286E0E7-D632-471D-ACFB-5333949127CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3286E0E7-D632-471D-ACFB-5333949127CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3286E0E7-D632-471D-ACFB-5333949127CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3286E0E7-D632-471D-ACFB-5333949127CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{111DE082-AED9-4A6D-A974-F46F02E73B05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{111DE082-AED9-4A6D-A974-F46F02E73B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{111DE082-AED9-4A6D-A974-F46F02E73B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{111DE082-AED9-4A6D-A974-F46F02E73B05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6BBCBCE-5B3A-4BA9-B6D2-989E923561D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6BBCBCE-5B3A-4BA9-B6D2-989E923561D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6BBCBCE-5B3A-4BA9-B6D2-989E923561D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6BBCBCE-5B3A-4BA9-B6D2-989E923561D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D769358C-BB6B-4B89-87F0-1B96717DF981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D769358C-BB6B-4B89-87F0-1B96717DF981}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D769358C-BB6B-4B89-87F0-1B96717DF981}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D769358C-BB6B-4B89-87F0-1B96717DF981}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,15 @@
+c:\users\steven\documents\visual studio 2012\Projects\BlackjackSim\BlackjackSim\bin\Debug\BlackjackSim.exe.config
+c:\users\steven\documents\visual studio 2012\Projects\BlackjackSim\BlackjackSim\bin\Debug\BlackjackSim.exe
+c:\users\steven\documents\visual studio 2012\Projects\BlackjackSim\BlackjackSim\bin\Debug\BlackjackSim.pdb
+c:\users\steven\documents\visual studio 2012\Projects\BlackjackSim\BlackjackSim\obj\Debug\BlackjackSim.csprojResolveAssemblyReference.cache
+c:\users\steven\documents\visual studio 2012\Projects\BlackjackSim\BlackjackSim\obj\Debug\BlackjackSim.Properties.Resources.resources
+c:\users\steven\documents\visual studio 2012\Projects\BlackjackSim\BlackjackSim\obj\Debug\BlackjackSim.csproj.GenerateResource.Cache
+c:\users\steven\documents\visual studio 2012\Projects\BlackjackSim\BlackjackSim\obj\Debug\BlackjackSim.exe
+c:\users\steven\documents\visual studio 2012\Projects\BlackjackSim\BlackjackSim\obj\Debug\BlackjackSim.pdb
+C:\Users\Steven\documents\visual studio 2012\Projects\BlackjackSim\BlackjackSim\bin\Debug\Cornfield.Blackjack.Library.dll
+C:\Users\Steven\documents\visual studio 2012\Projects\BlackjackSim\BlackjackSim\bin\Debug\Cornfield.Blackjack.Library.pdb
+C:\Users\Steven\documents\visual studio 2012\Projects\BlackjackSim\BlackjackSim\bin\Debug\Cornfield.CardGame.Library.dll
+C:\Users\Steven\documents\visual studio 2012\Projects\BlackjackSim\BlackjackSim\bin\Debug\Cornfield.CardGame.Library.pdb
+C:\Users\Steven\documents\visual studio 2012\Projects\BlackjackSim\BlackjackSim\obj\Debug\BlackjackSim.BlackjackSimMain.resources
+C:\Users\Steven\documents\visual studio 2012\Projects\BlackjackSim\BlackjackSim\bin\Debug\Cornfield.Blackjack.Players.dll
+C:\Users\Steven\documents\visual studio 2012\Projects\BlackjackSim\BlackjackSim\bin\Debug\Cornfield.Blackjack.Players.pdb
